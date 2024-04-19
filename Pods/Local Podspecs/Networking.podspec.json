@@ -20,6 +20,9 @@
   },
   "source_files": "Networking/Classes/**/*",
   "dependencies": {
+    "Moya": [
+
+    ],
     "Moya/Combine": [
 
     ]

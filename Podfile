@@ -11,6 +11,7 @@ end
 
 target 'BookApp' do
 
+  pod 'Moya', '~> 15.0'
   pod 'Moya/Combine', '~> 15.0'
   pod 'ProgressHUD', '14.1.0'
 
