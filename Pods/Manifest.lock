@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (5.9.1)
+  - Moya/Combine (15.0.0):
+    - Moya/Core
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Networking (0.1.0):
+    - Moya/Combine
+  - Platform (0.1.0):
+    - ProgressHUD
+  - ProgressHUD (14.1.0)
+
+DEPENDENCIES:
+  - Moya/Combine (~> 15.0)
+  - Networking (from `./LocalPods/Networking`)
+  - Platform (from `./LocalPods/Platform`)
+  - ProgressHUD (= 14.1.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Moya
+    - ProgressHUD
+
+EXTERNAL SOURCES:
+  Networking:
+    :path: "./LocalPods/Networking"
+  Platform:
+    :path: "./LocalPods/Platform"
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  Networking: 8fc27e037d94cf766a16d3eb164e234d0a153a60
+  Platform: 212fb35374db0b967dc9b295b96dab9f2b88a937
+  ProgressHUD: c4a55f108815c46a6bf082407d2f806840b7a869
+
+PODFILE CHECKSUM: 3c11aa0b6df425f0bd7e5258bba7e7637c094161
+
+COCOAPODS: 1.15.2
