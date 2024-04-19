@@ -99,13 +99,11 @@
 		B250076C2BD23F6B00464FA6 /* BookApp */ = {
 			isa = PBXGroup;
 			children = (
-				B250076D2BD23F6B00464FA6 /* AppDelegate.swift */,
-				B250076F2BD23F6B00464FA6 /* SceneDelegate.swift */,
-				B25007712BD23F6B00464FA6 /* ViewController.swift */,
-				B25007732BD23F6B00464FA6 /* Main.storyboard */,
-				B25007762BD23F6D00464FA6 /* Assets.xcassets */,
-				B25007782BD23F6D00464FA6 /* LaunchScreen.storyboard */,
-				B250077B2BD23F6D00464FA6 /* Info.plist */,
+				B250079D2BD2453D00464FA6 /* Application */,
+				B250079F2BD246B000464FA6 /* Scenes */,
+				B25007A02BD246BA00464FA6 /* Domain */,
+				B25007A12BD246C200464FA6 /* Data */,
+				B250079E2BD2456800464FA6 /* Resources */,
 			);
 			path = BookApp;
 			sourceTree = "<group>";
@@ -125,6 +123,128 @@
 				B25007902BD23F6D00464FA6 /* BookAppUITestsLaunchTests.swift */,
 			);
 			path = BookAppUITests;
+			sourceTree = "<group>";
+		};
+		B250079D2BD2453D00464FA6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B250076D2BD23F6B00464FA6 /* AppDelegate.swift */,
+				B250076F2BD23F6B00464FA6 /* SceneDelegate.swift */,
+				B25007732BD23F6B00464FA6 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B250079E2BD2456800464FA6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B250077B2BD23F6D00464FA6 /* Info.plist */,
+				B25007762BD23F6D00464FA6 /* Assets.xcassets */,
+				B25007782BD23F6D00464FA6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B250079F2BD246B000464FA6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B25007A22BD2471600464FA6 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B25007A02BD246BA00464FA6 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B25007A82BD2478E00464FA6 /* UseCases */,
+				B25007AA2BD247A500464FA6 /* Repositories */,
+				B25007A92BD2479800464FA6 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B25007A12BD246C200464FA6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B25007AB2BD247AF00464FA6 /* Repsitories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B25007A22BD2471600464FA6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B25007A72BD2476100464FA6 /* Coordinator */,
+				B25007A42BD2473F00464FA6 /* ViewControllers */,
+				B25007A32BD2472B00464FA6 /* Views */,
+				B25007A62BD2475100464FA6 /* ViewModels */,
+				B25007A52BD2474600464FA6 /* Models */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B25007A32BD2472B00464FA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B25007A42BD2473F00464FA6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B25007712BD23F6B00464FA6 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B25007A52BD2474600464FA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B25007A62BD2475100464FA6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B25007A72BD2476100464FA6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B25007A82BD2478E00464FA6 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B25007A92BD2479800464FA6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B25007AA2BD247A500464FA6 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B25007AB2BD247AF00464FA6 /* Repsitories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repsitories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,7 +563,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BookApp/Info.plist;
+				INFOPLIST_FILE = BookApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -471,7 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BookApp/Info.plist;
+				INFOPLIST_FILE = BookApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
