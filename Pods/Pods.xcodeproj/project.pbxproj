@@ -13,7 +13,6 @@
 		045DBE53C37FEBF45AB6EE526BA63031 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469915C4FFD5D9CA095885FDF55BEC06 /* RedirectHandler.swift */; };
 		07B5935BA3A76FAFDEF2964133C3540A /* ProgressHUD+SquareCircuitSnake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878DBEEC72B03626D5492D2A4C4367B1 /* ProgressHUD+SquareCircuitSnake.swift */; };
 		08768D1252FF6C28EAD4C612C3B03B7D /* Pods-BookApp-BookAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A582697F5435BB1D0B612C4A1D31512 /* Pods-BookApp-BookAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0F53C3F99819B240EB33D02F29BBC8B0 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FC276F652100F4E7BA0506ECA7845F /* ApiEndpoint.swift */; };
 		11030BEFB1CFF37056B64B86BA69ACC9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01B6B51D93EB9CB4BC9AABEBE5DC5C3 /* HTTPMethod.swift */; };
 		16A2639886D0D1EA18A71A48520B2957 /* ProgressHUD+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB2DCAF61FD8C155D2220F3DCB6CA4D /* ProgressHUD+Enums.swift */; };
 		176ABFE4DC9918F51EF9F310AF85CD0C /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD44DDC2D96A4611903B06DC7A94543 /* URLSessionConfiguration+Alamofire.swift */; };
@@ -31,7 +30,6 @@
 		2CB85FCF101E5B2A88547F6B0E6364C9 /* Platform-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBEBDE5CD227A1BA5DB5C664E233E88A /* Platform-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2D430147653B7D8176175BE3ABFCE10E /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F21A652D30A0C246503721AD1AFC078 /* MultipartFormData.swift */; };
 		2F08656EB3599E492DC849885A009359 /* NetworkActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D2FB4D51619EC541A9104FBDFA9E33 /* NetworkActivityPlugin.swift */; };
-		327556C30CE6DF500711E50E7F276E28 /* Networking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D809A10D0584B9D063A001AB8D330 /* Networking-dummy.m */; };
 		35CB4F6A7D980CF895BFAE5F6D249701 /* ProgressHUD+CirclePulseMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171AAB4043582C843202B0D77446F8E3 /* ProgressHUD+CirclePulseMultiple.swift */; };
 		36DA621FB8CF169CA8CCDA969152E72B /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F5AC25B52AA84DA878A07C25CCF28 /* AFError.swift */; };
 		3CD63123CD65457467A96793FD142CF5 /* Moya-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F4F9C22D5C3554AACE9B1A9921B509D /* Moya-dummy.m */; };
@@ -64,12 +62,11 @@
 		79824EF553E06F225E999C29F932080F /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FCF06F3B9E7A8F4F4C1A2E7A836CE /* ServerTrustEvaluation.swift */; };
 		7D8E59694072B0D7DE29699101CEA917 /* ProgressHUD+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FE4B1C1440162381AD74620DE55420 /* ProgressHUD+ActivityIndicator.swift */; };
 		7E4DB8D7D961744E0E1E4F9BB782417E /* Pods-BookAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D00E76023FD1DE05854D0AAA2A240CE2 /* Pods-BookAppTests-dummy.m */; };
-		7F7ADE44419C0676A398429E63A95374 /* Networking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D57DB54E625830B99DDFFF4EEF0595E /* Networking-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F7ADE44419C0676A398429E63A95374 /* Networking-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F14F8C2A688263785319B143A0F93D /* Networking-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		81A8676DAB246FA1BB6C73848BCABE46 /* ProgressHUD+CircleDotSpinFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2735AECD5EEECF297535E7DD18F21BE1 /* ProgressHUD+CircleDotSpinFade.swift */; };
 		81D057F776A25747756438679D7D00F4 /* AccessTokenPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2327A9212B6BEBA9F43DCC0B8D8C4 /* AccessTokenPlugin.swift */; };
 		84ED36D1CE41459837287D439E28BA57 /* ProgressHUD+HorizontalBarScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C7E582C769786477A99A3C69A4FE3D /* ProgressHUD+HorizontalBarScaling.swift */; };
 		856A6316C30F736C89C1C630F3953D1B /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B92E4667C3F1685F0EF495008D306 /* RequestTaskMap.swift */; };
-		870B74663555F580C0EB3FF62B1586E2 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A6653B132BED2A91DFC445C935660 /* ApiClient.swift */; };
 		8770D887890A64AD1FD25A224F8ADA4B /* ProgressHUD+CirclePulseSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D3DAA37F9A92D8E1BB5ED7E6652582 /* ProgressHUD+CirclePulseSingle.swift */; };
 		87768148D19B475EC9A098E109A0D082 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C4D0A4EBF75E7CA967557C5E7853546C /* PrivacyInfo.xcprivacy */; };
 		8879499DB32335AEBB16484EF61817D7 /* RequestTypeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B186520C923E9DA80F1891B2AB74A5 /* RequestTypeWrapper.swift */; };
@@ -98,6 +95,7 @@
 		B0A57956625D7FA79365BDC6E61D410A /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AC227A36DA6F6224C2AFA77A5C84F0 /* DataRequest.swift */; };
 		B13B0CEBBB989330FC8FC60ABB95D90A /* ProgressHUD+CircleBarSpinFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB3AE4D8E33DBD65066E43D57CB37D /* ProgressHUD+CircleBarSpinFade.swift */; };
 		B2119533E467109B4770C7576E54470E /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6CB9D6B5FFD5D63B9681402E263EF1 /* ParameterEncoder.swift */; };
+		B25242D42BD27C9200B86E3F /* ResponseWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242D32BD27C9100B86E3F /* ResponseWrapper.swift */; };
 		B58DFE8F7B1CAB931A466AE3D7D0A109 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3545D4877BC72A83030B7ECE4AB879B4 /* Alamofire-dummy.m */; };
 		BC3F9EA4E23C8ED0F95F889397BA762B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CF8FEB9B56CACFE0B74CDF6948531F /* Session.swift */; };
 		C080EE848CBA1530A0458CE8BCC78BF5 /* Pods-BookApp-BookAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F47FACE48DFA571B51C2819B002B55E /* Pods-BookApp-BookAppUITests-dummy.m */; };
@@ -109,10 +107,12 @@
 		D1E013F8165F2262397D71020E1710F8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D08ACA8085E3837628C956B38607B5 /* Image.swift */; };
 		D38001C27E00776C8C86E65C571B5B17 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C71203AF560FFF2BDEEF8F7A489BC0 /* Notifications.swift */; };
 		D4C85E31D2712353B5C12DFCFBC6C439 /* Moya+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACC78E0DA52D59B9166D7E0A11B4CC /* Moya+Alamofire.swift */; };
+		D4EF6C61BE8322AD0928DECEF52D28C1 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552EBC73A5518FFFDD50B497F2AAA495 /* ApiEndpoint.swift */; };
 		D9DF2E58777F63132C87D924E6EE0351 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B261059C552B7E7945857A473CD1ABF6 /* MultipartFormData.swift */; };
 		DD99C9B62DBC7B89250BCA46A0658962 /* ProgressHUD+LiveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F85DE16724C6020364AFC619CEEF63 /* ProgressHUD+LiveIcon.swift */; };
 		DE9620A5DF7FA3A617A718D518930B45 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD405D0B99B32ADB9807C549687A78A /* SessionDelegate.swift */; };
 		E1B8FDEEE04DD8B783AC26D52818EE5E /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF05371183583232BE3D46E5681D2B /* RequestInterceptor.swift */; };
+		E20097CAA02DE8E25C4FCDA4CB88D493 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A107085BA7F5E4799406B08FEE2195 /* ApiClient.swift */; };
 		E270C4DA2F251EC8D2FE6A39A3BC40B1 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6E2C64F0BBC98ECC416DBB32CC602 /* DispatchQueue+Alamofire.swift */; };
 		E728074C0CE11AB49EB7FD9B876F32B5 /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AE1437A5C68DE7804B14E5EC638D72 /* URLEncodedFormEncoder.swift */; };
 		E97C67EE14FE2ACDF1FD3C26096BCC0E /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D662E331F17A51D6BA74618A71BBFB7 /* ResponseSerialization.swift */; };
@@ -122,6 +122,7 @@
 		F4C2747DDFC289631FCFB4935E100A5B /* ProgressHUD+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9CD9877E04ABFFA7AA7037DF7B60FF /* ProgressHUD+Public.swift */; };
 		F501B727293B8512099A3DEA8A380DAD /* ProgressHUD+DualDotSidestep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FFE02F3AE04BB75FB6BEE1EE8B3D78 /* ProgressHUD+DualDotSidestep.swift */; };
 		F8FE88B15927F03D4E4FD91339A96A46 /* ProgressHUD+BarSweepToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B69DBCB32829F85BAFBFA96B654A9 /* ProgressHUD+BarSweepToggle.swift */; };
+		FFD74278F54A33E2010C0C6E0C4C492C /* Networking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B686FFE637E7086C61F5E61A3893A410 /* Networking-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,21 +262,18 @@
 		235F74E6CBF973E620BDCD62B339C56B /* Pods-BookAppTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-BookAppTests"; path = "libPods-BookAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24B545C055C7DFBEB3BDD013A1BF263E /* Pods-BookAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BookAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2735AECD5EEECF297535E7DD18F21BE1 /* ProgressHUD+CircleDotSpinFade.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleDotSpinFade.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleDotSpinFade.swift"; sourceTree = "<group>"; };
-		29DCDF283AC99BDBCC131E76350AA6C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2A1852E2019C706C901502099A18AFD0 /* Moya.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Moya.release.xcconfig; sourceTree = "<group>"; };
 		2AEA1A0F08D3877322706C0F99EED1B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2E48CAC05E4214C0B32DBB2808E413E3 /* MoyaProvider+Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MoyaProvider+Defaults.swift"; path = "Sources/Moya/MoyaProvider+Defaults.swift"; sourceTree = "<group>"; };
 		2F4F9C22D5C3554AACE9B1A9921B509D /* Moya-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Moya-dummy.m"; sourceTree = "<group>"; };
 		2FDA34B9FEAB00EB22C2DF3D16D2774E /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/Features/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		31934174E1C955B1E73F8EBCB7F11703 /* ProgressHUD+CircleRippleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleRippleMultiple.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleRippleMultiple.swift"; sourceTree = "<group>"; };
-		3391511D4210F273D576240BAA77DCA5 /* Networking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Networking.modulemap; sourceTree = "<group>"; };
 		33FE4B1C1440162381AD74620DE55420 /* ProgressHUD+ActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+ActivityIndicator.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		3545D4877BC72A83030B7ECE4AB879B4 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		372245F94609AD58EE20926645BFC384 /* ProgressHUD+TriangleDotShift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+TriangleDotShift.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+TriangleDotShift.swift"; sourceTree = "<group>"; };
 		372A70EB120F2C5940566CAECD2EB02E /* Pods-BookAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BookAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3752AC7F8372C45A763D0893E99055CA /* Moya.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Moya.debug.xcconfig; sourceTree = "<group>"; };
 		3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Moya; path = libMoya.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		375F53B83D3CCB0BDABCB986BCA8E489 /* Networking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Networking.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3775431ABCB12F026BE26B1C81089AD0 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Core/Request.swift; sourceTree = "<group>"; };
 		38F3FC979F5A07CBC11F50CBD6D03F41 /* ValidationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationType.swift; path = Sources/Moya/ValidationType.swift; sourceTree = "<group>"; };
 		397358319D8862DE5B8A5D39B6B822AD /* ProgressHUD+CircleArcDotSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleArcDotSpin.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleArcDotSpin.swift"; sourceTree = "<group>"; };
@@ -295,7 +293,8 @@
 		4927AC1CCBBC22022DEFB87D52A6F5F5 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/Extensions/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
 		49367BA99E323926BFF640F4FC70CD50 /* Pods-BookApp-BookAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BookApp-BookAppUITests.modulemap"; sourceTree = "<group>"; };
 		4BB6DEA4A3371DBD8ED83BDEE384650E /* ProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = ProgressHUD/Sources/ProgressView.swift; sourceTree = "<group>"; };
-		4C03B0F85968D7E2B42D0E38EC4880A2 /* Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Networking.debug.xcconfig; sourceTree = "<group>"; };
+		4BD33745B66A0B2E9DCDBD3E4F2DD2F4 /* Networking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Networking.modulemap; sourceTree = "<group>"; };
+		4CB8F97D2074C7BB3524AED17A53B7EA /* Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Networking.release.xcconfig; sourceTree = "<group>"; };
 		4D01A0406C70088DA29745A61B2FB34B /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/Features/AlamofireExtended.swift; sourceTree = "<group>"; };
 		4D3E8ED6473D64935D9A3F5AAAE7AFD7 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
 		4DE7298698BC42240279FE94535E9B6D /* Pods-BookApp-BookAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BookApp-BookAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -303,21 +302,22 @@
 		4F21A652D30A0C246503721AD1AFC078 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Sources/Moya/MultipartFormData.swift; sourceTree = "<group>"; };
 		502A1EABE50076B0383FE1D9E6E51F65 /* ProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		52365891E7F8E85871F4DBB2F16E6ACB /* Moya-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Moya-umbrella.h"; sourceTree = "<group>"; };
+		552EBC73A5518FFFDD50B497F2AAA495 /* ApiEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApiEndpoint.swift; path = Networking/Classes/ApiEndpoint.swift; sourceTree = "<group>"; };
 		569C9873E02267C2947E820BE69912D3 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/Features/EventMonitor.swift; sourceTree = "<group>"; };
 		57F990FEA1F907BDC21900E305A983AD /* Pods-BookAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BookAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58682E6F0675EF555FE4D936036F6B79 /* Plugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Plugin.swift; path = Sources/Moya/Plugin.swift; sourceTree = "<group>"; };
 		58BA316228AA5D4B7263888A5A2A6137 /* ProgressHUD+Banner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+Banner.swift"; path = "ProgressHUD/Sources/ProgressHUD+Banner.swift"; sourceTree = "<group>"; };
 		5BBB244BF8E3BD4F53D5A09E5D152DDD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5C0DE07D294DCAE76FCCEF52899DB625 /* Networking.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Networking.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Alamofire; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E32D275D04FDAF79ABB973C0655CAF5 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/Core/ParameterEncoding.swift; sourceTree = "<group>"; };
 		5EB8563D8E17D115C0828D74335BDFF6 /* Platform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Platform.release.xcconfig; sourceTree = "<group>"; };
 		60B3D2B10F2FF50E756FBA5521B15093 /* Platform */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Platform; path = libPlatform.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FFE02F3AE04BB75FB6BEE1EE8B3D78 /* ProgressHUD+DualDotSidestep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+DualDotSidestep.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+DualDotSidestep.swift"; sourceTree = "<group>"; };
 		626EDA67206102EF45DE4237AA49E230 /* TargetType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TargetType.swift; path = Sources/Moya/TargetType.swift; sourceTree = "<group>"; };
+		65E7D531274809392F65275CF9256BD5 /* Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Networking.debug.xcconfig; sourceTree = "<group>"; };
 		69FA8536AC1371B7123892A37D28CD71 /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/Features/RetryPolicy.swift; sourceTree = "<group>"; };
-		6A7A6653B132BED2A91DFC445C935660 /* ApiClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = Networking/Classes/ApiClient.swift; sourceTree = "<group>"; };
 		6B65FC32DB37E3C2C183076C403D6AC1 /* Pods-BookApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BookApp-dummy.m"; sourceTree = "<group>"; };
-		6D8316E63E217B59A8AA795CA50E1BA2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6E666EF00DD3D45FDED77B977EAFAF37 /* ProgressHUD+SFSymbolBounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+SFSymbolBounce.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+SFSymbolBounce.swift"; sourceTree = "<group>"; };
 		70C955C87F568568B9104A3A649B486C /* DataStreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataStreamRequest.swift; path = Source/Core/DataStreamRequest.swift; sourceTree = "<group>"; };
 		73D3DAA37F9A92D8E1BB5ED7E6652582 /* ProgressHUD+CirclePulseSingle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CirclePulseSingle.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CirclePulseSingle.swift"; sourceTree = "<group>"; };
@@ -333,6 +333,7 @@
 		874894667E86B0B746E0E6D204478099 /* DownloadRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DownloadRequest.swift; path = Source/Core/DownloadRequest.swift; sourceTree = "<group>"; };
 		878DBEEC72B03626D5492D2A4C4367B1 /* ProgressHUD+SquareCircuitSnake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+SquareCircuitSnake.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+SquareCircuitSnake.swift"; sourceTree = "<group>"; };
 		898711246BB6842BB5B11DBAA93D9593 /* MoyaProvider+Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MoyaProvider+Combine.swift"; path = "Sources/CombineMoya/MoyaProvider+Combine.swift"; sourceTree = "<group>"; };
+		89F14F8C2A688263785319B143A0F93D /* Networking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Networking-umbrella.h"; sourceTree = "<group>"; };
 		8A83BDF880C975E7876A37AEB347ECCF /* ProgressHUD+BallVerticalBounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+BallVerticalBounce.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+BallVerticalBounce.swift"; sourceTree = "<group>"; };
 		8AD405D0B99B32ADB9807C549687A78A /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/Core/SessionDelegate.swift; sourceTree = "<group>"; };
 		8B2956AFF378B5A8D7A9F31C981377F8 /* Platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Platform.debug.xcconfig; sourceTree = "<group>"; };
@@ -342,16 +343,15 @@
 		95D993AD336B6690A00EE08F706BF567 /* URL+Moya.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Moya.swift"; path = "Sources/Moya/URL+Moya.swift"; sourceTree = "<group>"; };
 		970A6B96D20927D09551C9E3CE6C6106 /* WebSocketRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocketRequest.swift; path = Source/Core/WebSocketRequest.swift; sourceTree = "<group>"; };
 		9BB2DCAF61FD8C155D2220F3DCB6CA4D /* ProgressHUD+Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+Enums.swift"; path = "ProgressHUD/Sources/ProgressHUD+Enums.swift"; sourceTree = "<group>"; };
-		9D57DB54E625830B99DDFFF4EEF0595E /* Networking-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Networking-umbrella.h"; sourceTree = "<group>"; };
 		9D662E331F17A51D6BA74618A71BBFB7 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/Features/ResponseSerialization.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E89ACC51F28ED64433470D4F71851BD /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		A1526914260864B12E23514F2A7D4FA7 /* CredentialsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CredentialsPlugin.swift; path = Sources/Moya/Plugins/CredentialsPlugin.swift; sourceTree = "<group>"; };
 		A1D08ACA8085E3837628C956B38607B5 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Moya/Image.swift; sourceTree = "<group>"; };
 		A2EED5158BAC86E151322EE3EF6219AD /* Pods-BookApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BookApp-resources.sh"; sourceTree = "<group>"; };
+		A3A107085BA7F5E4799406B08FEE2195 /* ApiClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = Networking/Classes/ApiClient.swift; sourceTree = "<group>"; };
 		A3A40B2D96A2F0972B5D046588BB81D5 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		A3D54A1DCF09BB4C6C58B7FFE94C52A5 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Sources/Moya/Response.swift; sourceTree = "<group>"; };
-		A43B92ED843FBFAAADF908860C85F4C3 /* Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Networking.release.xcconfig; sourceTree = "<group>"; };
 		A4B03D5F89CE7F5FF4358CA15797C917 /* Pods-BookApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BookApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		A50DE8419FB29FC7D69A63ED5F8389D4 /* ProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		A6F85DE16724C6020364AFC619CEEF63 /* ProgressHUD+LiveIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+LiveIcon.swift"; path = "ProgressHUD/Sources/ProgressHUD+LiveIcon.swift"; sourceTree = "<group>"; };
@@ -359,12 +359,16 @@
 		AD4382327691D26D5863E40351B9614B /* RequestCompression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestCompression.swift; path = Source/Features/RequestCompression.swift; sourceTree = "<group>"; };
 		AE921765A3D8F93FE79BD26378D2812F /* ProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
 		AFF2327A9212B6BEBA9F43DCC0B8D8C4 /* AccessTokenPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessTokenPlugin.swift; path = Sources/Moya/Plugins/AccessTokenPlugin.swift; sourceTree = "<group>"; };
+		B25242D32BD27C9100B86E3F /* ResponseWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseWrapper.swift; sourceTree = "<group>"; };
 		B261059C552B7E7945857A473CD1ABF6 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/Features/MultipartFormData.swift; sourceTree = "<group>"; };
+		B472E62B0F1C0D7B64241EAB86598586 /* Networking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Networking-prefix.pch"; sourceTree = "<group>"; };
+		B686FFE637E7086C61F5E61A3893A410 /* Networking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Networking-dummy.m"; sourceTree = "<group>"; };
 		B7F9B34CAB58C5003FD9037D63E68A1A /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/Extensions/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		BBC27F47FCCEA555C0C11147A52DDB39 /* Pods-BookApp-BookAppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BookApp-BookAppUITests-resources.sh"; sourceTree = "<group>"; };
 		BBCAE721873C341B7E8CE04305A9BA2F /* Pods-BookApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BookApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BC7536D456E2AA06D5284ED5E4EF8D62 /* ProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressHUD.modulemap; sourceTree = "<group>"; };
 		BD8CBDAFC2319EAA38E2AF6235518EC7 /* ProgressHUD+PacmanProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+PacmanProgress.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+PacmanProgress.swift"; sourceTree = "<group>"; };
+		C1CAFCB28E38B4D449F97CFAFDEAC55B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C24680BB16609C78530B385A115B8028 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Core/Protected.swift; sourceTree = "<group>"; };
 		C3CCFADE2820210502117E25922FC106 /* NetworkLoggerPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkLoggerPlugin.swift; path = Sources/Moya/Plugins/NetworkLoggerPlugin.swift; sourceTree = "<group>"; };
 		C4D0A4EBF75E7CA967557C5E7853546C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Source/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
@@ -373,7 +377,6 @@
 		C8D6C465CC45D84A4D6FFA8F119B932C /* ProgressHUD+HorizontalDotScaling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+HorizontalDotScaling.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+HorizontalDotScaling.swift"; sourceTree = "<group>"; };
 		CA1EAF9685CAD0A223AC0AA2BC860B6D /* MoyaProvider+Internal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "MoyaProvider+Internal.swift"; path = "Sources/Moya/MoyaProvider+Internal.swift"; sourceTree = "<group>"; };
 		D00E76023FD1DE05854D0AAA2A240CE2 /* Pods-BookAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BookAppTests-dummy.m"; sourceTree = "<group>"; };
-		D15D809A10D0584B9D063A001AB8D330 /* Networking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Networking-dummy.m"; sourceTree = "<group>"; };
 		D261FB3E6ACBFFD5627115CA37443750 /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/Core/HTTPHeaders.swift; sourceTree = "<group>"; };
 		D2CF8FEB9B56CACFE0B74CDF6948531F /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Core/Session.swift; sourceTree = "<group>"; };
 		D7FF05371183583232BE3D46E5681D2B /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/Features/RequestInterceptor.swift; sourceTree = "<group>"; };
@@ -381,7 +384,6 @@
 		DBEBDE5CD227A1BA5DB5C664E233E88A /* Platform-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Platform-umbrella.h"; sourceTree = "<group>"; };
 		E01B6B51D93EB9CB4BC9AABEBE5DC5C3 /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/Core/HTTPMethod.swift; sourceTree = "<group>"; };
 		E12F4BB40C420B23CE036AA893CFB936 /* ProgressHUD+CircleRippleSingle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleRippleSingle.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleRippleSingle.swift"; sourceTree = "<group>"; };
-		E2FC276F652100F4E7BA0506ECA7845F /* ApiEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ApiEndpoint.swift; path = Networking/Classes/ApiEndpoint.swift; sourceTree = "<group>"; };
 		E4AC227A36DA6F6224C2AFA77A5C84F0 /* DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRequest.swift; path = Source/Core/DataRequest.swift; sourceTree = "<group>"; };
 		E7E4916991B164BE6728CA837700C81D /* AnyEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyEncodable.swift; path = Sources/Moya/AnyEncodable.swift; sourceTree = "<group>"; };
 		E8098EE52294E0E39D2510A4F38C57CB /* Platform-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Platform-dummy.m"; sourceTree = "<group>"; };
@@ -392,10 +394,10 @@
 		EE4B92E4667C3F1685F0EF495008D306 /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/Core/RequestTaskMap.swift; sourceTree = "<group>"; };
 		EE95130F62395EED3CB8A8E29B8B1935 /* MoyaPublisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoyaPublisher.swift; path = Sources/CombineMoya/MoyaPublisher.swift; sourceTree = "<group>"; };
 		F095B06EAAEEDA43EAC1AAD0F68A8B26 /* ProgressHUD+CircleRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleRotateChase.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleRotateChase.swift"; sourceTree = "<group>"; };
+		F0FB1FCE541C1970700FA0BDD2C0241C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3A1BC61109C5E45BE1542B9A9BE30C1 /* Pods-BookApp-BookAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BookApp-BookAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F3AF0523666ECA57F27418C2483C8AAB /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Extensions/Result+Alamofire.swift"; sourceTree = "<group>"; };
 		F6D50EDD1B43C8339F0EE56194F7D3AA /* MultiTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiTarget.swift; path = Sources/Moya/MultiTarget.swift; sourceTree = "<group>"; };
-		F83B0CAB7D0A92FB4E8C067ECC1444F8 /* Networking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Networking-prefix.pch"; sourceTree = "<group>"; };
 		FA3FCF06F3B9E7A8F4F4C1A2E7A836CE /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/Features/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
 		FBAB9589289A111A828BA69B169949B3 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/Features/MultipartUpload.swift; sourceTree = "<group>"; };
 		FE9CD9877E04ABFFA7AA7037DF7B60FF /* ProgressHUD+Public.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+Public.swift"; path = "ProgressHUD/Sources/ProgressHUD+Public.swift"; sourceTree = "<group>"; };
@@ -555,30 +557,6 @@
 			path = Moya;
 			sourceTree = "<group>";
 		};
-		2ED5B727B53A3842338F0E9C073FB278 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3391511D4210F273D576240BAA77DCA5 /* Networking.modulemap */,
-				D15D809A10D0584B9D063A001AB8D330 /* Networking-dummy.m */,
-				F83B0CAB7D0A92FB4E8C067ECC1444F8 /* Networking-prefix.pch */,
-				9D57DB54E625830B99DDFFF4EEF0595E /* Networking-umbrella.h */,
-				4C03B0F85968D7E2B42D0E38EC4880A2 /* Networking.debug.xcconfig */,
-				A43B92ED843FBFAAADF908860C85F4C3 /* Networking.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../../Pods/Target Support Files/Networking";
-			sourceTree = "<group>";
-		};
-		364421621C3A3A82CD8F57128B516E69 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				6D8316E63E217B59A8AA795CA50E1BA2 /* LICENSE */,
-				375F53B83D3CCB0BDABCB986BCA8E489 /* Networking.podspec */,
-				29DCDF283AC99BDBCC131E76350AA6C2 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		4130AA4AC44E57F17A80FD9F0F739D6B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,18 +569,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ProgressHUD";
-			sourceTree = "<group>";
-		};
-		4157051BEB21715BB37BB03CC2F18D91 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				E2FC276F652100F4E7BA0506ECA7845F /* ApiEndpoint.swift */,
-				6A7A6653B132BED2A91DFC445C935660 /* ApiClient.swift */,
-				364421621C3A3A82CD8F57128B516E69 /* Pod */,
-				2ED5B727B53A3842338F0E9C073FB278 /* Support Files */,
-			);
-			name = Networking;
-			path = ../LocalPods/Networking;
 			sourceTree = "<group>";
 		};
 		4BA41876D2444BCD2FB222F5423911DA /* Targets Support Files */ = {
@@ -628,7 +594,7 @@
 		660635B672D1A21CC3CECEC5AE55E169 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4157051BEB21715BB37BB03CC2F18D91 /* Networking */,
+				FDFBC0C2588DC543B42D173895832670 /* Networking */,
 				F01B4FAAF4E04817E6719A40AD4744EE /* Platform */,
 			);
 			name = "Development Pods";
@@ -761,6 +727,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		98AED5528C427E8423E14ACDE50591B2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C1CAFCB28E38B4D449F97CFAFDEAC55B /* LICENSE */,
+				5C0DE07D294DCAE76FCCEF52899DB625 /* Networking.podspec */,
+				F0FB1FCE541C1970700FA0BDD2C0241C /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		C8AD69129CF7ABF0498953BEF0D8CE14 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,6 +783,20 @@
 			);
 			sourceTree = "<group>";
 		};
+		CFDF98FBC325351A9FB943E31BB9BA53 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BD33745B66A0B2E9DCDBD3E4F2DD2F4 /* Networking.modulemap */,
+				B686FFE637E7086C61F5E61A3893A410 /* Networking-dummy.m */,
+				B472E62B0F1C0D7B64241EAB86598586 /* Networking-prefix.pch */,
+				89F14F8C2A688263785319B143A0F93D /* Networking-umbrella.h */,
+				65E7D531274809392F65275CF9256BD5 /* Networking.debug.xcconfig */,
+				4CB8F97D2074C7BB3524AED17A53B7EA /* Networking.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../../Pods/Target Support Files/Networking";
+			sourceTree = "<group>";
+		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,6 +826,19 @@
 			);
 			name = "Pods-BookAppTests";
 			path = "Target Support Files/Pods-BookAppTests";
+			sourceTree = "<group>";
+		};
+		FDFBC0C2588DC543B42D173895832670 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A3A107085BA7F5E4799406B08FEE2195 /* ApiClient.swift */,
+				B25242D32BD27C9100B86E3F /* ResponseWrapper.swift */,
+				552EBC73A5518FFFDD50B497F2AAA495 /* ApiEndpoint.swift */,
+				98AED5528C427E8423E14ACDE50591B2 /* Pod */,
+				CFDF98FBC325351A9FB943E31BB9BA53 /* Support Files */,
+			);
+			name = Networking;
+			path = ../LocalPods/Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1006,7 +1009,7 @@
 			buildConfigurationList = 751AF8E51C53B6021C1953753B4FE550 /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
 				B73531C0C2E7A293225D1FA699C7BFA5 /* Headers */,
-				F9A5DDD47289E305503AE52534C271DC /* Sources */,
+				125900EAB4B98A1C9B6BB44D2316EB11 /* Sources */,
 				32B49B34199955B9DF26A3B98BB64194 /* Frameworks */,
 				A316147A90C19CAC6A925F26AA2AB7FB /* Copy generated compatibility header */,
 			);
@@ -1257,6 +1260,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		125900EAB4B98A1C9B6BB44D2316EB11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25242D42BD27C9200B86E3F /* ResponseWrapper.swift in Sources */,
+				E20097CAA02DE8E25C4FCDA4CB88D493 /* ApiClient.swift in Sources */,
+				D4EF6C61BE8322AD0928DECEF52D28C1 /* ApiEndpoint.swift in Sources */,
+				FFD74278F54A33E2010C0C6E0C4C492C /* Networking-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		199C4B8CB0C40E2225D7E71E584A813D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1410,16 +1424,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9A5DDD47289E305503AE52534C271DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F53C3F99819B240EB33D02F29BBC8B0 /* ApiEndpoint.swift in Sources */,
-				870B74663555F580C0EB3FF62B1586E2 /* ApiClient.swift in Sources */,
-				327556C30CE6DF500711E50E7F276E28 /* Networking-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1516,17 +1520,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		013931ED5C9EAB2F97123AACE67CF427 /* Release */ = {
+		067ADF648E018634CA2F7581ACEE626A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 372A70EB120F2C5940566CAECD2EB02E /* Pods-BookAppTests.release.xcconfig */;
+			baseConfigurationReference = 8BAE0C758A755FD81D70EDDBD830D646 /* Pods-BookApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BookApp/Pods-BookApp.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1540,14 +1545,14 @@
 		};
 		09D01CA9FC84EFA3214894EA4C4A7DD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A43B92ED843FBFAAADF908860C85F4C3 /* Networking.release.xcconfig */;
+			baseConfigurationReference = 4CB8F97D2074C7BB3524AED17A53B7EA /* Networking.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Networking/Networking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/Networking/Networking.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1564,28 +1569,6 @@
 			};
 			name = Release;
 		};
-		2CBB7335A10343DD461740D4E64E428C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B35839BBBE9F05A8495B9C48C75297D /* Pods-BookApp-BookAppUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		3525F102418C7CE4562DCAF4D1028AAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D3E8ED6473D64935D9A3F5AAAE7AFD7 /* Alamofire.release.xcconfig */;
@@ -1595,7 +1578,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1621,7 +1604,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/ProgressHUD/ProgressHUD.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1646,7 +1629,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Platform/Platform-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/Platform/Platform.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1663,103 +1646,7 @@
 			};
 			name = Release;
 		};
-		4C0D4A84721D30B80B050EF83AC8DEFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A1852E2019C706C901502099A18AFD0 /* Moya.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Moya/Moya-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MODULEMAP_FILE = Headers/Public/Moya/Moya.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Moya;
-				PRODUCT_NAME = Moya;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4CE270036C7327B155CC9F23051A97C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47015C0131AFB8A95FE306A56CC6B2AD /* Pods-BookApp-BookAppUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		780FAB0D2CAC1529A899DDC8B1BAFFAC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2296A3D2346DE46F19C38AE2EF3EF38B /* Alamofire.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7C32A64C32A651845712413EC8CCD777 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBCAE721873C341B7E8CE04305A9BA2F /* Pods-BookApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BookApp/Pods-BookApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1812,7 +1699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1825,7 +1712,124 @@
 			};
 			name = Debug;
 		};
-		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+		4C0D4A84721D30B80B050EF83AC8DEFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A1852E2019C706C901502099A18AFD0 /* Moya.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Moya/Moya-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MODULEMAP_FILE = Headers/Public/Moya/Moya.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Moya;
+				PRODUCT_NAME = Moya;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55079449E28551E3D8ADD1428AB809DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B35839BBBE9F05A8495B9C48C75297D /* Pods-BookApp-BookAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6388353D6C5366802B9CF34D845B8650 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47015C0131AFB8A95FE306A56CC6B2AD /* Pods-BookApp-BookAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		780FAB0D2CAC1529A899DDC8B1BAFFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2296A3D2346DE46F19C38AE2EF3EF38B /* Alamofire.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87A7DB593723B61193ECBD7B9CA4DD19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24B545C055C7DFBEB3BDD013A1BF263E /* Pods-BookAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1875,7 +1879,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1887,6 +1891,28 @@
 			};
 			name = Release;
 		};
+		8D4AF6B2C1E88621A184D21F2FFD3DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 372A70EB120F2C5940566CAECD2EB02E /* Pods-BookAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		A42C012DAB978DC79CC4E1B1FF8AAF1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2296A3D2346DE46F19C38AE2EF3EF38B /* Alamofire.debug.xcconfig */;
@@ -1895,12 +1921,34 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
 				IBSC_MODULE = Alamofire;
 				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		AA83141438CCD59076F2A580B0A19C23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBCAE721873C341B7E8CE04305A9BA2F /* Pods-BookApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BookApp/Pods-BookApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1913,7 +1961,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Platform/Platform-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/Platform/Platform.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1938,7 +1986,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/ProgressHUD/ProgressHUD.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1961,7 +2009,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Alamofire";
 				IBSC_MODULE = Alamofire;
 				INFOPLIST_FILE = "Target Support Files/Alamofire/ResourceBundle-Alamofire-Alamofire-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1979,7 +2027,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Moya/Moya-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/Moya/Moya.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1995,60 +2043,16 @@
 			};
 			name = Debug;
 		};
-		EA9B26435FA30D4ABEB597BD71536259 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24B545C055C7DFBEB3BDD013A1BF263E /* Pods-BookAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		FD540038F6C6689E68838B9A57E83434 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BAE0C758A755FD81D70EDDBD830D646 /* Pods-BookApp.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BookApp/Pods-BookApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		FF0C10880B163FEA877221E62A20E37A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C03B0F85968D7E2B42D0E38EC4880A2 /* Networking.debug.xcconfig */;
+			baseConfigurationReference = 65E7D531274809392F65275CF9256BD5 /* Networking.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Networking/Networking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MODULEMAP_FILE = Headers/Public/Networking/Networking.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -2079,8 +2083,8 @@
 		22AA57DE76BDE206359661714C02EC2D /* Build configuration list for PBXNativeTarget "Pods-BookAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA9B26435FA30D4ABEB597BD71536259 /* Debug */,
-				013931ED5C9EAB2F97123AACE67CF427 /* Release */,
+				87A7DB593723B61193ECBD7B9CA4DD19 /* Debug */,
+				8D4AF6B2C1E88621A184D21F2FFD3DC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2088,8 +2092,8 @@
 		43E0B3D119E6299EE52F1EEC060AAC48 /* Build configuration list for PBXNativeTarget "Pods-BookApp-BookAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CBB7335A10343DD461740D4E64E428C /* Debug */,
-				4CE270036C7327B155CC9F23051A97C7 /* Release */,
+				55079449E28551E3D8ADD1428AB809DE /* Debug */,
+				6388353D6C5366802B9CF34D845B8650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2097,8 +2101,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
-				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
+				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2124,8 +2128,8 @@
 		BDD41AA912F2D0BA2A63F1B432910D9C /* Build configuration list for PBXNativeTarget "Pods-BookApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7C32A64C32A651845712413EC8CCD777 /* Debug */,
-				FD540038F6C6689E68838B9A57E83434 /* Release */,
+				AA83141438CCD59076F2A580B0A19C23 /* Debug */,
+				067ADF648E018634CA2F7581ACEE626A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

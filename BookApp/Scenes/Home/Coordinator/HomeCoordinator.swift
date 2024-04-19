@@ -17,7 +17,10 @@ final class HomeCoordinator {
     }
     
     func start() {
-        let viewController = HomeViewController()
+        let repository = StandardHomeRepository(apiClient: dependencies.apiClient)
+        let useCase = StandardHomeUseCase(repository: repository)
+        let viewModel = HomeViewModel(useCase: useCase)
+        let viewController = HomeViewController(viewModel: viewModel)
         navigationController.viewControllers = [viewController]
     }
 }

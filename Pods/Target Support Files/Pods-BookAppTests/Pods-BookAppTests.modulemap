@@ -1,0 +1,6 @@
+module Pods_BookAppTests {
+  umbrella header "Pods-BookAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

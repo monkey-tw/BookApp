@@ -13,7 +13,7 @@ protocol HomeUseCase {
     func requestBookList() -> AnyPublisher<[BookModel], HttpError>
 }
 
-class StandardSearchTabUseCase: HomeUseCase {
+class StandardHomeUseCase: HomeUseCase {
     let repository: HomeRepository
     
     init(repository: HomeRepository) {
