@@ -11,6 +11,7 @@ import Combine
 
 protocol BookDetailUseCase {
     func updateBook(entity: BookEntity) -> AnyPublisher<BookModel, HttpError>
+    func deleteBook(isbn: String) -> AnyPublisher<String, HttpError>
 }
 
 class StandardBookDetailUseCase: BookDetailUseCase {
@@ -23,6 +24,12 @@ class StandardBookDetailUseCase: BookDetailUseCase {
     func updateBook(entity: BookEntity) -> AnyPublisher<BookModel, HttpError> {
         return repository.updateBook(entity: entity)
             .map { BookModel.init(from: $0) }
+            .eraseToAnyPublisher()
+    }
+    
+    func deleteBook(isbn: String) -> AnyPublisher<String, HttpError> {
+        return Just("succes")
+            .setFailureType(to: HttpError.self)
             .eraseToAnyPublisher()
     }
 }

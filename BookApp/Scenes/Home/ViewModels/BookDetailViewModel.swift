@@ -11,13 +11,14 @@ import Combine
 final class BookDetailViewModel: ObservableObject {
     enum Action {
         case updateBook(BookEntity)
+        case deleteBook(String)
     }
     @Published var requestError: Error?
     @Published var newBook: BookModel?
+    @Published var deletedMessage: String?
     
     let useCase: BookDetailUseCase
     let bookModel: BookModel
-    let iconName: String
     private var cancelable: Set<AnyCancellable> = .init()
     
     @Published var bookTitle = "" {
@@ -33,10 +34,9 @@ final class BookDetailViewModel: ObservableObject {
     @Published var date: Date = .init()
     @Published var isButtonEnabled = false
     
-    init(useCase: BookDetailUseCase, bookModel: BookModel, iconName: String) {
+    init(useCase: BookDetailUseCase, bookModel: BookModel) {
         self.useCase = useCase
         self.bookModel = bookModel
-        self.iconName = iconName
         bookTitle = bookModel.title
         author = bookModel.author
         let dateFormatter = DateFormatter()
@@ -60,6 +60,18 @@ final class BookDetailViewModel: ObservableObject {
                 } receiveValue: { model in
                     self.newBook = model
                     NotificationCenter.default.post(name: .bookDidUpdated, object: nil)
+            }.store(in: &cancelable)
+        case .deleteBook(let isbn):
+            useCase.deleteBook(isbn: isbn)
+                .sink { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        self.requestError = error
+                    }
+                } receiveValue: { message in
+                    self.deletedMessage = message
             }.store(in: &cancelable)
         }
     }

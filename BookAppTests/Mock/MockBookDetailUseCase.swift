@@ -33,4 +33,16 @@ final class MockBookDetailUseCase: BookDetailUseCase {
                 .eraseToAnyPublisher()
         }
     }
+    
+    func deleteBook(isbn: String) -> AnyPublisher<String, HttpError> {
+        switch scenario {
+        case .success:
+            return Just("success")
+                .setFailureType(to: HttpError.self)
+                .eraseToAnyPublisher()
+        case .failed:
+            return Fail(error: HttpError.serverError(nil))
+                .eraseToAnyPublisher()
+        }
+    }
 }
