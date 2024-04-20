@@ -10,4 +10,5 @@ import Foundation
 protocol HomeNavigator {
     func pushToAddBookPage()
     func popToLastPage()
+    func pushToBookDetailPage(_ bookModel: BookModel)
 }

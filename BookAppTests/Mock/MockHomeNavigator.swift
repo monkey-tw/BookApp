@@ -12,6 +12,7 @@ final class MockHomeNavigator: HomeNavigator {
     enum Scenario {
         case pushToAddBookPage
         case popToLastPage
+        case pushToBookDetailPage
     }
     
     var scenario: Scenario?
@@ -22,5 +23,9 @@ final class MockHomeNavigator: HomeNavigator {
     
     func popToLastPage() {
         scenario = .popToLastPage
+    }
+    
+    func pushToBookDetailPage(_ bookModel: BookModel) {
+        scenario = .pushToBookDetailPage
     }
 }

@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     enum Action {
         case requestBookList
         case pushToAddBookPage
+        case pushToBookDetailPage(BookModel)
     }
     @Published var books: [BookModel] = []
     @Published var requestError: Error?
@@ -41,6 +42,8 @@ class HomeViewModel: ObservableObject {
             }.store(in: &cancelable)
         case .pushToAddBookPage:
             self.navigator.pushToAddBookPage()
+        case .pushToBookDetailPage(let model):
+            navigator.pushToBookDetailPage(model)
         }
     }
 }

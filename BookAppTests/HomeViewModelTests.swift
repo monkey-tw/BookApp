@@ -73,4 +73,16 @@ final class HomeViewModelTests: XCTestCase {
         // Then
         XCTAssertEqual(navigator.scenario, .pushToAddBookPage)
     }
+    
+    func test_whenClickBookItem_thenPushToBookDetailPage() throws {
+        // Given
+        sut = HomeViewModel(useCase: useCase, navigator: navigator)
+        let bookModel = BookModel(title: "title1", author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
+        
+        // When
+        sut.sendAction(.pushToBookDetailPage(bookModel))
+        
+        // Then
+        XCTAssertEqual(navigator.scenario, .pushToBookDetailPage)
+    }
 }
