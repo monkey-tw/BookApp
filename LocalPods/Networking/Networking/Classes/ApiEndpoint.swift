@@ -10,6 +10,7 @@ import Moya
 
 public enum ApiEndpoint {
     case bookList
+    case addBook([String : Any])
 }
 
 extension ApiEndpoint: TargetType {
@@ -20,7 +21,9 @@ extension ApiEndpoint: TargetType {
     public var path: String {
         switch self {
         case .bookList:
-            return "/bookList"
+            return "/books"
+        case .addBook:
+            return "/books"
         }
     }
     
@@ -28,6 +31,8 @@ extension ApiEndpoint: TargetType {
         switch self {
         case .bookList:
             return .get
+        case .addBook:
+            return .post
         }
     }
     
@@ -35,6 +40,8 @@ extension ApiEndpoint: TargetType {
         switch self {
         case .bookList:
             return .requestPlain
+        case .addBook(let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }
     

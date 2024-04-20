@@ -35,6 +35,12 @@
 		B25242D82BD34ED200B86E3F /* MockHomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242D72BD34ED200B86E3F /* MockHomeNavigator.swift */; };
 		B25242DA2BD3510000B86E3F /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242D92BD3510000B86E3F /* AddBookViewController.swift */; };
 		B25242DC2BD3511600B86E3F /* AddBookPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242DB2BD3511600B86E3F /* AddBookPageView.swift */; };
+		B25242DE2BD3533700B86E3F /* AddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242DD2BD3533700B86E3F /* AddBookViewModel.swift */; };
+		B25242E02BD3535700B86E3F /* AddBookViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242DF2BD3535700B86E3F /* AddBookViewModelTests.swift */; };
+		B25242E22BD3543800B86E3F /* AddBookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E12BD3543800B86E3F /* AddBookUseCase.swift */; };
+		B25242E42BD3553D00B86E3F /* AddBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E32BD3553D00B86E3F /* AddBookRepository.swift */; };
+		B25242E62BD3559C00B86E3F /* StandardAddBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E52BD3559C00B86E3F /* StandardAddBookRepository.swift */; };
+		B25242E82BD35C8C00B86E3F /* MockAddBookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E72BD35C8C00B86E3F /* MockAddBookUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +94,12 @@
 		B25242D72BD34ED200B86E3F /* MockHomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeNavigator.swift; sourceTree = "<group>"; };
 		B25242D92BD3510000B86E3F /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
 		B25242DB2BD3511600B86E3F /* AddBookPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookPageView.swift; sourceTree = "<group>"; };
+		B25242DD2BD3533700B86E3F /* AddBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModel.swift; sourceTree = "<group>"; };
+		B25242DF2BD3535700B86E3F /* AddBookViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModelTests.swift; sourceTree = "<group>"; };
+		B25242E12BD3543800B86E3F /* AddBookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookUseCase.swift; sourceTree = "<group>"; };
+		B25242E32BD3553D00B86E3F /* AddBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookRepository.swift; sourceTree = "<group>"; };
+		B25242E52BD3559C00B86E3F /* StandardAddBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAddBookRepository.swift; sourceTree = "<group>"; };
+		B25242E72BD35C8C00B86E3F /* MockAddBookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddBookUseCase.swift; sourceTree = "<group>"; };
 		B93EA9A9FE10E3CA0327D60E /* Pods-BookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp.release.xcconfig"; path = "Target Support Files/Pods-BookApp/Pods-BookApp.release.xcconfig"; sourceTree = "<group>"; };
 		C1D41A021A4893F986E1298E /* Pods-BookApp-BookAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp-BookAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2828D9B3BA47D0252E78EB /* Pods-BookAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookAppTests.release.xcconfig"; path = "Target Support Files/Pods-BookAppTests/Pods-BookAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +197,7 @@
 			children = (
 				B25242D02BD2784E00B86E3F /* Mock */,
 				B25007842BD23F6D00464FA6 /* HomeViewModelTests.swift */,
+				B25242DF2BD3535700B86E3F /* AddBookViewModelTests.swift */,
 			);
 			path = BookAppTests;
 			sourceTree = "<group>";
@@ -289,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				B25242BD2BD2656100B86E3F /* HomeViewModel.swift */,
+				B25242DD2BD3533700B86E3F /* AddBookViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -306,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				B25242C32BD2668900B86E3F /* HomeUseCase.swift */,
+				B25242E12BD3543800B86E3F /* AddBookUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -322,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				B25242C52BD266DD00B86E3F /* HomeRepository.swift */,
+				B25242E32BD3553D00B86E3F /* AddBookRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -330,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				B25242C72BD268F800B86E3F /* StandardHomeRepository.swift */,
+				B25242E52BD3559C00B86E3F /* StandardAddBookRepository.swift */,
 			);
 			path = Repsitories;
 			sourceTree = "<group>";
@@ -339,6 +356,7 @@
 			children = (
 				B25242D12BD2785900B86E3F /* MockHomeUseCase.swift */,
 				B25242D72BD34ED200B86E3F /* MockHomeNavigator.swift */,
+				B25242E72BD35C8C00B86E3F /* MockAddBookUseCase.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -581,6 +599,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25242E22BD3543800B86E3F /* AddBookUseCase.swift in Sources */,
+				B25242E62BD3559C00B86E3F /* StandardAddBookRepository.swift in Sources */,
 				B25242B82BD261CD00B86E3F /* AppCoordinator.swift in Sources */,
 				B25242C82BD268F800B86E3F /* StandardHomeRepository.swift in Sources */,
 				B25242DC2BD3511600B86E3F /* AddBookPageView.swift in Sources */,
@@ -589,6 +609,8 @@
 				B25242CD2BD2741A00B86E3F /* HomePageView.swift in Sources */,
 				B25007722BD23F6B00464FA6 /* HomeViewController.swift in Sources */,
 				B25242C02BD265A400B86E3F /* BookEntity.swift in Sources */,
+				B25242DE2BD3533700B86E3F /* AddBookViewModel.swift in Sources */,
+				B25242E42BD3553D00B86E3F /* AddBookRepository.swift in Sources */,
 				B25242C22BD265ED00B86E3F /* BookModel.swift in Sources */,
 				B25242BC2BD2622900B86E3F /* HomeNavigator.swift in Sources */,
 				B25242C42BD2668900B86E3F /* HomeUseCase.swift in Sources */,
@@ -607,6 +629,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25242D22BD2785900B86E3F /* MockHomeUseCase.swift in Sources */,
+				B25242E82BD35C8C00B86E3F /* MockAddBookUseCase.swift in Sources */,
+				B25242E02BD3535700B86E3F /* AddBookViewModelTests.swift in Sources */,
 				B25242D82BD34ED200B86E3F /* MockHomeNavigator.swift in Sources */,
 				B25007852BD23F6D00464FA6 /* HomeViewModelTests.swift in Sources */,
 			);

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Platform
 
 struct BookEntity: Codable {
     let title: String
