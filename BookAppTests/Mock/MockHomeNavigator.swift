@@ -11,11 +11,16 @@ import Foundation
 final class MockHomeNavigator: HomeNavigator {
     enum Scenario {
         case pushToAddBookPage
+        case popToLastPage
     }
     
     var scenario: Scenario?
     
     func pushToAddBookPage() {
-        self.scenario = .pushToAddBookPage
+        scenario = .pushToAddBookPage
+    }
+    
+    func popToLastPage() {
+        scenario = .popToLastPage
     }
 }

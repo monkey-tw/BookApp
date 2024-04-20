@@ -29,9 +29,13 @@ extension HomeCoordinator: HomeNavigator {
     func pushToAddBookPage() {
         let repository = StandardAddBookRepository(apiClient: dependencies.apiClient)
         let useCase = StandardAddBookUseCase(repository: repository)
-        let viewModel = AddBookViewModel(useCase: useCase)
+        let viewModel = AddBookViewModel(useCase: useCase, navigator: self)
         let viewController = AddBookViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func popToLastPage() {
+        navigationController.popViewController(animated: true)
     }
 }
 

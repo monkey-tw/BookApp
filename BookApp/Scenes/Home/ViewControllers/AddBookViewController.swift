@@ -31,9 +31,10 @@ class AddBookViewController: UIHostingController<AddBookPageView> {
     }
     
     private func setupBindings() {
-        viewModel.$newBook.sink { model in
+        viewModel.$newBook.sink {[weak self] model in
             if model != nil {
                 LoadingView.succeed("Add Book Successfully")
+                self?.viewModel.sendAction(.backToHomePage)
             }
         }.store(in: &cancellable)
         

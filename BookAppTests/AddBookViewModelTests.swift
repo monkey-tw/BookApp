@@ -11,11 +11,13 @@ import Combine
 
 final class AddBookViewModelTests: XCTestCase {
     var useCase: MockAddBookUseCase!
+    var navigator: MockHomeNavigator!
     var sut: AddBookViewModel!
     private var cancellable: Set<AnyCancellable> = .init()
     
     override func setUpWithError() throws {
         useCase = MockAddBookUseCase(scenario: .success)
+        navigator = MockHomeNavigator()
     }
 
     override func tearDownWithError() throws {
@@ -24,7 +26,7 @@ final class AddBookViewModelTests: XCTestCase {
     func test_whenClickAddButton_thenAddSuccessfully() {
         // Given
         useCase = MockAddBookUseCase(scenario: .success)
-        sut = AddBookViewModel(useCase: useCase)
+        sut = AddBookViewModel(useCase: useCase, navigator: navigator)
         let bookTitle = "title1"
         let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
         let expectation = XCTestExpectation(description: "add a book")
@@ -47,7 +49,7 @@ final class AddBookViewModelTests: XCTestCase {
     func test_whenClickAddButton_thenHasError() throws {
         // Given
         useCase = MockAddBookUseCase(scenario: .failed)
-        sut = AddBookViewModel(useCase: useCase)
+        sut = AddBookViewModel(useCase: useCase, navigator: navigator)
         let bookTitle = "title1"
         let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
         let expectation = XCTestExpectation(description: "add a book then receive a error")
@@ -64,5 +66,17 @@ final class AddBookViewModelTests: XCTestCase {
         
         // Then
         wait(for: [expectation], timeout: 1)
+    }
+    
+    func test_whenSendBackToHomePageAction_thenPopToLastPage() {
+        // Given
+        useCase = MockAddBookUseCase(scenario: .success)
+        sut = AddBookViewModel(useCase: useCase, navigator: navigator)
+        
+        // When
+        sut.sendAction(.backToHomePage)
+        
+        // Then
+        XCTAssertEqual(navigator.scenario, .popToLastPage)
     }
 }

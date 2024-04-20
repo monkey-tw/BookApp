@@ -11,6 +11,7 @@ import Combine
 final class AddBookViewModel: ObservableObject {
     enum Action {
         case addBook(BookEntity)
+        case backToHomePage
     }
     @Published var requestError: Error?
     @Published var newBook: BookModel?
@@ -37,10 +38,12 @@ final class AddBookViewModel: ObservableObject {
     @Published var isButtonEnabled = false
     
     let useCase: AddBookUseCase
+    let navigator: HomeNavigator
     private var cancelable: Set<AnyCancellable> = .init()
     
-    init(useCase: AddBookUseCase) {
+    init(useCase: AddBookUseCase, navigator: HomeNavigator) {
         self.useCase = useCase
+        self.navigator = navigator
     }
     
     func sendAction(_ action: Action) {
@@ -57,6 +60,8 @@ final class AddBookViewModel: ObservableObject {
                 } receiveValue: { model in
                     self.newBook = model
             }.store(in: &cancelable)
+        case .backToHomePage:
+            navigator.popToLastPage()
         }
     }
     
