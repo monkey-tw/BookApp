@@ -41,6 +41,8 @@
 		B25242E42BD3553D00B86E3F /* AddBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E32BD3553D00B86E3F /* AddBookRepository.swift */; };
 		B25242E62BD3559C00B86E3F /* StandardAddBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E52BD3559C00B86E3F /* StandardAddBookRepository.swift */; };
 		B25242E82BD35C8C00B86E3F /* MockAddBookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E72BD35C8C00B86E3F /* MockAddBookUseCase.swift */; };
+		B25242EA2BD3795000B86E3F /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242E92BD3795000B86E3F /* BookDetailViewController.swift */; };
+		B25242EC2BD3799200B86E3F /* BookDetailPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242EB2BD3799200B86E3F /* BookDetailPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		B25242E32BD3553D00B86E3F /* AddBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookRepository.swift; sourceTree = "<group>"; };
 		B25242E52BD3559C00B86E3F /* StandardAddBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardAddBookRepository.swift; sourceTree = "<group>"; };
 		B25242E72BD35C8C00B86E3F /* MockAddBookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddBookUseCase.swift; sourceTree = "<group>"; };
+		B25242E92BD3795000B86E3F /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		B25242EB2BD3799200B86E3F /* BookDetailPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailPageView.swift; sourceTree = "<group>"; };
 		B93EA9A9FE10E3CA0327D60E /* Pods-BookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp.release.xcconfig"; path = "Target Support Files/Pods-BookApp/Pods-BookApp.release.xcconfig"; sourceTree = "<group>"; };
 		C1D41A021A4893F986E1298E /* Pods-BookApp-BookAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp-BookAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2828D9B3BA47D0252E78EB /* Pods-BookAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookAppTests.release.xcconfig"; path = "Target Support Files/Pods-BookAppTests/Pods-BookAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 				B25242CC2BD2741A00B86E3F /* HomePageView.swift */,
 				B25242D52BD27DC400B86E3F /* HomeBookItemView.swift */,
 				B25242DB2BD3511600B86E3F /* AddBookPageView.swift */,
+				B25242EB2BD3799200B86E3F /* BookDetailPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			children = (
 				B25007712BD23F6B00464FA6 /* HomeViewController.swift */,
 				B25242D92BD3510000B86E3F /* AddBookViewController.swift */,
+				B25242E92BD3795000B86E3F /* BookDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -608,7 +614,9 @@
 				B25242BE2BD2656100B86E3F /* HomeViewModel.swift in Sources */,
 				B25242CD2BD2741A00B86E3F /* HomePageView.swift in Sources */,
 				B25007722BD23F6B00464FA6 /* HomeViewController.swift in Sources */,
+				B25242EC2BD3799200B86E3F /* BookDetailPageView.swift in Sources */,
 				B25242C02BD265A400B86E3F /* BookEntity.swift in Sources */,
+				B25242EA2BD3795000B86E3F /* BookDetailViewController.swift in Sources */,
 				B25242DE2BD3533700B86E3F /* AddBookViewModel.swift in Sources */,
 				B25242E42BD3553D00B86E3F /* AddBookRepository.swift in Sources */,
 				B25242C22BD265ED00B86E3F /* BookModel.swift in Sources */,

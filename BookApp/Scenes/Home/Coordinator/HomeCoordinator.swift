@@ -40,6 +40,8 @@ extension HomeCoordinator: HomeNavigator {
     }
     
     func pushToBookDetailPage(_ bookModel: BookModel) {
+        let viewController = BookDetailViewController()
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
 

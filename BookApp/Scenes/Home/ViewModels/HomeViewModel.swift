@@ -46,4 +46,8 @@ class HomeViewModel: ObservableObject {
             navigator.pushToBookDetailPage(model)
         }
     }
+    
+    func getBookIconName(_ index: Int) -> String {
+        return "book-\(index%6)"
+    }
 }
