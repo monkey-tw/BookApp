@@ -28,10 +28,14 @@ class HomeViewController: UIHostingController<HomePageView> {
         super.viewDidLoad()
         
         title = "Book List"
+        setupViews()
+        setupBindings()
         
         viewModel.sendAction(.requestBookList)
-        
-        setupBindings()
+    }
+    
+    private func setupViews() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addButtonDidCilcked))
     }
 
     private func setupBindings() {
@@ -40,6 +44,11 @@ class HomeViewController: UIHostingController<HomePageView> {
                 LoadingView.failed(localizedDescription)
             }
         }.store(in: &cancellable)
+    }
+    
+    // MARK: - Event
+    @objc private func addButtonDidCilcked() {
+        viewModel.sendAction(.pushToAddBookPage)
     }
 }
 
