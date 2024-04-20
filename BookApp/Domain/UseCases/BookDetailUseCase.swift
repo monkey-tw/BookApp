@@ -12,3 +12,17 @@ import Combine
 protocol BookDetailUseCase {
     func updateBook(entity: BookEntity) -> AnyPublisher<BookModel, HttpError>
 }
+
+class StandardBookDetailUseCase: BookDetailUseCase {
+    let repository: BookDetailRepository
+    
+    init(repository: BookDetailRepository) {
+        self.repository = repository
+    }
+    
+    func updateBook(entity: BookEntity) -> AnyPublisher<BookModel, HttpError> {
+        return repository.updateBook(entity: entity)
+            .map { BookModel.init(from: $0) }
+            .eraseToAnyPublisher()
+    }
+}

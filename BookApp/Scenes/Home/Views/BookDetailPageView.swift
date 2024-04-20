@@ -6,9 +6,37 @@
 //
 
 import SwiftUI
+import Combine
+import Platform
 
 struct BookDetailPageView: View {
+    @ObservedObject var viewModel: BookDetailViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Text("Click text to edit, exclude ISBN")
+                .foregroundColor(.gray)
+            TextField("Book Title", text: $viewModel.bookTitle)
+            TextField("Book Author", text: $viewModel.author)
+            Text(viewModel.bookModel.ISBN)
+            DatePicker("DatePicker", selection: $viewModel.date, displayedComponents: [.date])
+            
+            HStack(spacing: 16) {
+                Button(action: {
+                    viewModel.sendAction(.updateBook(viewModel.bookModel.toEntity()))
+                }, label: {
+                    Text("Update")
+                })
+                .buttonStyle(RoundedRectangleButtonStyle())
+                .disabled(!viewModel.isButtonEnabled)
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Delete")
+                })
+                .buttonStyle(RoundedRectangleButtonStyle(labelColor: .red))
+            }
+        }
     }
 }

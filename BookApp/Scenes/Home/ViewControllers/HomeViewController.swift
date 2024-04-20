@@ -30,6 +30,7 @@ class HomeViewController: UIHostingController<HomePageView> {
         title = "Book List"
         setupViews()
         setupBindings()
+        setupNotifications()
         
         viewModel.sendAction(.requestBookList)
     }
@@ -44,6 +45,15 @@ class HomeViewController: UIHostingController<HomePageView> {
                 LoadingView.failed(localizedDescription)
             }
         }.store(in: &cancellable)
+    }
+    
+    private func setupNotifications() {
+        NotificationCenter.default.addObserver(forName: .bookDidUpdated, object: nil, queue: nil) {[weak self] _ in
+            self?.viewModel.sendAction(.requestBookList)
+        }
+        NotificationCenter.default.addObserver(forName: .bookDidAdded, object: nil, queue: nil) {[weak self] _ in
+            self?.viewModel.sendAction(.requestBookList)
+        }
     }
     
     // MARK: - Event

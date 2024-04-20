@@ -59,6 +59,7 @@ final class AddBookViewModel: ObservableObject {
                     }
                 } receiveValue: { model in
                     self.newBook = model
+                    NotificationCenter.default.post(name: .bookDidAdded, object: nil)
             }.store(in: &cancelable)
         case .backToHomePage:
             navigator.popToLastPage()

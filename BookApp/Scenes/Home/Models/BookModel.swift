@@ -8,7 +8,9 @@
 import Foundation
 
 struct BookModel: Identifiable {
-    let id: String = UUID().uuidString
+    var id: String {
+        return ISBN
+    }
     let title: String
     let author: String
     let publicationYear: String
@@ -26,5 +28,11 @@ struct BookModel: Identifiable {
         self.author = entity.author
         self.publicationYear = entity.publicationYear
         self.ISBN = entity.ISBN
+    }
+}
+
+extension BookModel {
+    func toEntity() -> BookEntity {
+        BookEntity(title: title, author: author, publicationYear: publicationYear, ISBN: ISBN)
     }
 }

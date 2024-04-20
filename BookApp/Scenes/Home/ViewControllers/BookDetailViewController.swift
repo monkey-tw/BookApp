@@ -7,11 +7,16 @@
 
 import UIKit
 import SwiftUI
+import Platform
+import Combine
 
 class BookDetailViewController: UIHostingController<BookDetailPageView> {
-
-    init() {
-        let pageView = BookDetailPageView()
+    let viewModel: BookDetailViewModel
+    private var cancellable: Set<AnyCancellable> = .init()
+    
+    init(viewModel: BookDetailViewModel) {
+        self.viewModel = viewModel
+        let pageView = BookDetailPageView(viewModel: viewModel)
         super.init(rootView: pageView)
     }
     
@@ -22,7 +27,14 @@ class BookDetailViewController: UIHostingController<BookDetailPageView> {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupBindings()
     }
 
+    private func setupBindings() {
+        viewModel.$newBook.sink { model in
+            if model != nil {
+                LoadingView.succeed("Update Book Successfully")
+            }
+        }.store(in: &cancellable)
+    }
 }

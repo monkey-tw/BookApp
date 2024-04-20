@@ -47,6 +47,9 @@
 		B2CDB6F92BD39C8600040556 /* BookDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDB6F82BD39C8600040556 /* BookDetailUseCase.swift */; };
 		B2CDB6FB2BD39D3D00040556 /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDB6FA2BD39D3D00040556 /* BookDetailViewModelTests.swift */; };
 		B2CDB6FD2BD39D6900040556 /* MockBookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDB6FC2BD39D6900040556 /* MockBookDetailViewModel.swift */; };
+		B2CDB6FF2BD3A1D300040556 /* BookDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDB6FE2BD3A1D300040556 /* BookDetailRepository.swift */; };
+		B2CDB7012BD3A21100040556 /* StandardBookDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDB7002BD3A21100040556 /* StandardBookDetailRepository.swift */; };
+		B2CDB7052BD3AEB900040556 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CDB7042BD3AEB900040556 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		B2CDB6F82BD39C8600040556 /* BookDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailUseCase.swift; sourceTree = "<group>"; };
 		B2CDB6FA2BD39D3D00040556 /* BookDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModelTests.swift; sourceTree = "<group>"; };
 		B2CDB6FC2BD39D6900040556 /* MockBookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBookDetailViewModel.swift; sourceTree = "<group>"; };
+		B2CDB6FE2BD3A1D300040556 /* BookDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailRepository.swift; sourceTree = "<group>"; };
+		B2CDB7002BD3A21100040556 /* StandardBookDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardBookDetailRepository.swift; sourceTree = "<group>"; };
+		B2CDB7042BD3AEB900040556 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B93EA9A9FE10E3CA0327D60E /* Pods-BookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp.release.xcconfig"; path = "Target Support Files/Pods-BookApp/Pods-BookApp.release.xcconfig"; sourceTree = "<group>"; };
 		C1D41A021A4893F986E1298E /* Pods-BookApp-BookAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp-BookAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2828D9B3BA47D0252E78EB /* Pods-BookAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookAppTests.release.xcconfig"; path = "Target Support Files/Pods-BookAppTests/Pods-BookAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 				B250079F2BD246B000464FA6 /* Scenes */,
 				B25007A02BD246BA00464FA6 /* Domain */,
 				B25007A12BD246C200464FA6 /* Data */,
+				B2CDB7022BD3AE8200040556 /* common */,
 				B250079E2BD2456800464FA6 /* Resources */,
 			);
 			path = BookApp;
@@ -355,6 +362,7 @@
 			children = (
 				B25242C52BD266DD00B86E3F /* HomeRepository.swift */,
 				B25242E32BD3553D00B86E3F /* AddBookRepository.swift */,
+				B2CDB6FE2BD3A1D300040556 /* BookDetailRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -364,6 +372,7 @@
 			children = (
 				B25242C72BD268F800B86E3F /* StandardHomeRepository.swift */,
 				B25242E52BD3559C00B86E3F /* StandardAddBookRepository.swift */,
+				B2CDB7002BD3A21100040556 /* StandardBookDetailRepository.swift */,
 			);
 			path = Repsitories;
 			sourceTree = "<group>";
@@ -377,6 +386,22 @@
 				B2CDB6FC2BD39D6900040556 /* MockBookDetailViewModel.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		B2CDB7022BD3AE8200040556 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B2CDB7032BD3AEA300040556 /* Defines */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		B2CDB7032BD3AEA300040556 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				B2CDB7042BD3AEB900040556 /* Notifications.swift */,
+			);
+			path = Defines;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -619,11 +644,13 @@
 			files = (
 				B25242E22BD3543800B86E3F /* AddBookUseCase.swift in Sources */,
 				B25242E62BD3559C00B86E3F /* StandardAddBookRepository.swift in Sources */,
+				B2CDB7052BD3AEB900040556 /* Notifications.swift in Sources */,
 				B25242B82BD261CD00B86E3F /* AppCoordinator.swift in Sources */,
 				B25242C82BD268F800B86E3F /* StandardHomeRepository.swift in Sources */,
 				B25242DC2BD3511600B86E3F /* AddBookPageView.swift in Sources */,
 				B25242C62BD266DD00B86E3F /* HomeRepository.swift in Sources */,
 				B2CDB6F72BD39C6F00040556 /* BookDetailViewModel.swift in Sources */,
+				B2CDB6FF2BD3A1D300040556 /* BookDetailRepository.swift in Sources */,
 				B25242BE2BD2656100B86E3F /* HomeViewModel.swift in Sources */,
 				B25242CD2BD2741A00B86E3F /* HomePageView.swift in Sources */,
 				B25007722BD23F6B00464FA6 /* HomeViewController.swift in Sources */,
@@ -636,6 +663,7 @@
 				B25242C22BD265ED00B86E3F /* BookModel.swift in Sources */,
 				B25242BC2BD2622900B86E3F /* HomeNavigator.swift in Sources */,
 				B25242C42BD2668900B86E3F /* HomeUseCase.swift in Sources */,
+				B2CDB7012BD3A21100040556 /* StandardBookDetailRepository.swift in Sources */,
 				B250076E2BD23F6B00464FA6 /* AppDelegate.swift in Sources */,
 				B25007702BD23F6B00464FA6 /* SceneDelegate.swift in Sources */,
 				B25242DA2BD3510000B86E3F /* AddBookViewController.swift in Sources */,

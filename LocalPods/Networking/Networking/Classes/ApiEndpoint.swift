@@ -11,6 +11,7 @@ import Moya
 public enum ApiEndpoint {
     case bookList
     case addBook([String : Any])
+    case updateBook(String, [String : Any])
 }
 
 extension ApiEndpoint: TargetType {
@@ -24,6 +25,8 @@ extension ApiEndpoint: TargetType {
             return "/books"
         case .addBook:
             return "/book"
+        case let .updateBook(id, _):
+            return "/books/\(id)"
         }
     }
     
@@ -33,6 +36,8 @@ extension ApiEndpoint: TargetType {
             return .get
         case .addBook:
             return .post
+        case .updateBook:
+            return .put
         }
     }
     
@@ -41,6 +46,8 @@ extension ApiEndpoint: TargetType {
         case .bookList:
             return .requestPlain
         case .addBook(let params):
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .updateBook(_, let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         }
     }

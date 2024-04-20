@@ -39,8 +39,11 @@ extension HomeCoordinator: HomeNavigator {
         navigationController.popViewController(animated: true)
     }
     
-    func pushToBookDetailPage(_ bookModel: BookModel) {
-        let viewController = BookDetailViewController()
+    func pushToBookDetailPage(_ bookModel: BookModel, _ icon: String) {
+        let repository = StandardBookDetailRepository(apiClient: dependencies.apiClient)
+        let useCase = StandardBookDetailUseCase(repository: repository)
+        let viewModel = BookDetailViewModel(useCase: useCase, bookModel: bookModel, iconName: icon)
+        let viewController = BookDetailViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

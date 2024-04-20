@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Platform
 
 struct AddBookPageView: View {
     @ObservedObject var viewModel: AddBookViewModel
@@ -22,7 +23,9 @@ struct AddBookPageView: View {
                 viewModel.addBook()
             } label: {
                 Text("Add a new book")
-            }.disabled(!viewModel.isButtonEnabled)
+            }
+            .buttonStyle(RoundedRectangleButtonStyle())
+            .disabled(!viewModel.isButtonEnabled)
         }
     }
 }
