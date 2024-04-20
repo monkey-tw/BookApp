@@ -10,10 +10,14 @@ import Combine
 @testable import BookApp
 
 final class HomeViewModelTests: XCTestCase {
+    var useCase: MockHomeUseCase!
+    var navigator: MockHomeNavigator!
     var sut: HomeViewModel!
     private var cancellable: Set<AnyCancellable> = .init()
     
     override func setUpWithError() throws {
+        useCase = MockHomeUseCase(scenario: .success)
+        navigator = MockHomeNavigator()
     }
 
     override func tearDownWithError() throws {
@@ -21,8 +25,8 @@ final class HomeViewModelTests: XCTestCase {
 
     func test_whenCallRequestBookListAction_thenHasBooks() throws {
         // Given
-        let useCase = MockHomeUseCase(scenario: .success)
-        sut = HomeViewModel(useCase: useCase)
+        useCase = MockHomeUseCase(scenario: .success)
+        sut = HomeViewModel(useCase: useCase, navigator: navigator)
         let expectation = XCTestExpectation(description: "publish 2 books")
         sut.$books
             .dropFirst()
@@ -41,8 +45,8 @@ final class HomeViewModelTests: XCTestCase {
 
     func test_whenCallRequestBookListAction_thenHasError() throws {
         // Given
-        let useCase = MockHomeUseCase(scenario: .failed)
-        sut = HomeViewModel(useCase: useCase)
+        useCase = MockHomeUseCase(scenario: .failed)
+        sut = HomeViewModel(useCase: useCase, navigator: navigator)
         let expectation = XCTestExpectation(description: "receive server error")
         sut.$requestError
             .dropFirst()
@@ -57,5 +61,16 @@ final class HomeViewModelTests: XCTestCase {
         
         // Then
         wait(for: [expectation], timeout: 1)
+    }
+    
+    func test_whenClickAddButton_thenPushToAddBookPage() throws {
+        // Given
+        sut = HomeViewModel(useCase: useCase, navigator: navigator)
+        
+        // When
+        sut.sendAction(.pushToAddBookPage)
+        
+        // Then
+        XCTAssertEqual(navigator.scenario, .pushToAddBookPage)
     }
 }

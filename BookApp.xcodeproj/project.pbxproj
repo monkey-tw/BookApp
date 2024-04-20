@@ -32,6 +32,9 @@
 		B25242CD2BD2741A00B86E3F /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242CC2BD2741A00B86E3F /* HomePageView.swift */; };
 		B25242D22BD2785900B86E3F /* MockHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242D12BD2785900B86E3F /* MockHomeUseCase.swift */; };
 		B25242D62BD27DC400B86E3F /* HomeBookItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242D52BD27DC400B86E3F /* HomeBookItemView.swift */; };
+		B25242D82BD34ED200B86E3F /* MockHomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242D72BD34ED200B86E3F /* MockHomeNavigator.swift */; };
+		B25242DA2BD3510000B86E3F /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242D92BD3510000B86E3F /* AddBookViewController.swift */; };
+		B25242DC2BD3511600B86E3F /* AddBookPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25242DB2BD3511600B86E3F /* AddBookPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		B25242CC2BD2741A00B86E3F /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		B25242D12BD2785900B86E3F /* MockHomeUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockHomeUseCase.swift; sourceTree = "<group>"; };
 		B25242D52BD27DC400B86E3F /* HomeBookItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBookItemView.swift; sourceTree = "<group>"; };
+		B25242D72BD34ED200B86E3F /* MockHomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeNavigator.swift; sourceTree = "<group>"; };
+		B25242D92BD3510000B86E3F /* AddBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		B25242DB2BD3511600B86E3F /* AddBookPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookPageView.swift; sourceTree = "<group>"; };
 		B93EA9A9FE10E3CA0327D60E /* Pods-BookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp.release.xcconfig"; path = "Target Support Files/Pods-BookApp/Pods-BookApp.release.xcconfig"; sourceTree = "<group>"; };
 		C1D41A021A4893F986E1298E /* Pods-BookApp-BookAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp-BookAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2828D9B3BA47D0252E78EB /* Pods-BookAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookAppTests.release.xcconfig"; path = "Target Support Files/Pods-BookAppTests/Pods-BookAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 			children = (
 				B25242CC2BD2741A00B86E3F /* HomePageView.swift */,
 				B25242D52BD27DC400B86E3F /* HomeBookItemView.swift */,
+				B25242DB2BD3511600B86E3F /* AddBookPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				B25007712BD23F6B00464FA6 /* HomeViewController.swift */,
+				B25242D92BD3510000B86E3F /* AddBookViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				B25242D12BD2785900B86E3F /* MockHomeUseCase.swift */,
+				B25242D72BD34ED200B86E3F /* MockHomeNavigator.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -574,6 +583,7 @@
 			files = (
 				B25242B82BD261CD00B86E3F /* AppCoordinator.swift in Sources */,
 				B25242C82BD268F800B86E3F /* StandardHomeRepository.swift in Sources */,
+				B25242DC2BD3511600B86E3F /* AddBookPageView.swift in Sources */,
 				B25242C62BD266DD00B86E3F /* HomeRepository.swift in Sources */,
 				B25242BE2BD2656100B86E3F /* HomeViewModel.swift in Sources */,
 				B25242CD2BD2741A00B86E3F /* HomePageView.swift in Sources */,
@@ -584,6 +594,7 @@
 				B25242C42BD2668900B86E3F /* HomeUseCase.swift in Sources */,
 				B250076E2BD23F6B00464FA6 /* AppDelegate.swift in Sources */,
 				B25007702BD23F6B00464FA6 /* SceneDelegate.swift in Sources */,
+				B25242DA2BD3510000B86E3F /* AddBookViewController.swift in Sources */,
 				B25242B62BD2616600B86E3F /* AppDependencies.swift in Sources */,
 				B25242BA2BD2620B00B86E3F /* HomeCoordinator.swift in Sources */,
 				B25242B42BD2614700B86E3F /* AppAppearance.swift in Sources */,
@@ -596,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B25242D22BD2785900B86E3F /* MockHomeUseCase.swift in Sources */,
+				B25242D82BD34ED200B86E3F /* MockHomeNavigator.swift in Sources */,
 				B25007852BD23F6D00464FA6 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

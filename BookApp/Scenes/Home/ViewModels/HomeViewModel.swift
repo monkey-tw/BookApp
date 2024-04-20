@@ -11,15 +11,18 @@ import Combine
 class HomeViewModel: ObservableObject {
     enum Action {
         case requestBookList
+        case pushToAddBookPage
     }
     @Published var books: [BookModel] = []
     @Published var requestError: Error?
     
     let useCase: HomeUseCase
+    let navigator: HomeNavigator
     private var cancelable: Set<AnyCancellable> = .init()
     
-    init(useCase: HomeUseCase) {
+    init(useCase: HomeUseCase, navigator: HomeNavigator) {
         self.useCase = useCase
+        self.navigator = navigator
     }
     
     func sendAction(_ action: Action) {
@@ -36,6 +39,8 @@ class HomeViewModel: ObservableObject {
                 } receiveValue: { books in
                 self.books = books
             }.store(in: &cancelable)
+        case .pushToAddBookPage:
+            self.navigator.pushToAddBookPage()
         }
     }
 }

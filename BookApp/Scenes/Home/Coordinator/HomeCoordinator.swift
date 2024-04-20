@@ -19,12 +19,16 @@ final class HomeCoordinator {
     func start() {
         let repository = StandardHomeRepository(apiClient: dependencies.apiClient)
         let useCase = StandardHomeUseCase(repository: repository)
-        let viewModel = HomeViewModel(useCase: useCase)
+        let viewModel = HomeViewModel(useCase: useCase, navigator: self)
         let viewController = HomeViewController(viewModel: viewModel)
         navigationController.viewControllers = [viewController]
     }
 }
 
 extension HomeCoordinator: HomeNavigator {
+    func pushToAddBookPage() {
+        let viewController = AddBookViewController()
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }
 
