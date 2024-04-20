@@ -42,7 +42,7 @@ extension HomeCoordinator: HomeNavigator {
     func pushToBookDetailPage(_ bookModel: BookModel) {
         let repository = StandardBookDetailRepository(apiClient: dependencies.apiClient)
         let useCase = StandardBookDetailUseCase(repository: repository)
-        let viewModel = BookDetailViewModel(useCase: useCase, bookModel: bookModel)
+        let viewModel = BookDetailViewModel(useCase: useCase, navigator: self, bookModel: bookModel)
         let viewController = BookDetailViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }

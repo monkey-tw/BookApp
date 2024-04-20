@@ -20,7 +20,7 @@ struct HomeBookItemView: View {
                 Text(bookModel.title)
                 Text(bookModel.author)
                 Text(bookModel.publicationYear)
-                Text(bookModel.ISBN)
+                Text(bookModel.isbn)
             }.layoutPriority(1)
             Spacer()
             Image(systemName: "arrow.right")

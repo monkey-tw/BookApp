@@ -18,6 +18,7 @@ final class BookDetailViewModel: ObservableObject {
     @Published var deletedMessage: String?
     
     let useCase: BookDetailUseCase
+    let navigator: HomeNavigator
     let bookModel: BookModel
     private var cancelable: Set<AnyCancellable> = .init()
     
@@ -34,8 +35,9 @@ final class BookDetailViewModel: ObservableObject {
     @Published var date: Date = .init()
     @Published var isButtonEnabled = false
     
-    init(useCase: BookDetailUseCase, bookModel: BookModel) {
+    init(useCase: BookDetailUseCase, navigator: HomeNavigator, bookModel: BookModel) {
         self.useCase = useCase
+        self.navigator = navigator
         self.bookModel = bookModel
         bookTitle = bookModel.title
         author = bookModel.author
@@ -72,6 +74,8 @@ final class BookDetailViewModel: ObservableObject {
                     }
                 } receiveValue: { message in
                     self.deletedMessage = message
+                    NotificationCenter.default.post(name: .bookDidDeleted, object: nil)
+                    self.navigator.popToLastPage()
             }.store(in: &cancelable)
         }
     }

@@ -16,7 +16,7 @@ struct AddBookPageView: View {
         Form {
             TextField("Book Title", text: $viewModel.bookTitle)
             TextField("Book Author", text: $viewModel.author)
-            TextField("Book ISBN", text: $viewModel.ISBN)
+            TextField("Book isbn", text: $viewModel.isbn)
             DatePicker("DatePicker", selection: $viewModel.date, displayedComponents: [.date])
             
             Button {

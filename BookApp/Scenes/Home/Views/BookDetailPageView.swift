@@ -14,11 +14,11 @@ struct BookDetailPageView: View {
     
     var body: some View {
         Form {
-            Text("Click text to edit, exclude ISBN")
+            Text("Click text to edit, exclude isbn")
                 .foregroundColor(.gray)
             TextField("Book Title", text: $viewModel.bookTitle)
             TextField("Book Author", text: $viewModel.author)
-            Text(viewModel.bookModel.ISBN)
+            Text(viewModel.bookModel.isbn)
             DatePicker("DatePicker", selection: $viewModel.date, displayedComponents: [.date])
             
             HStack(spacing: 16) {
@@ -31,7 +31,7 @@ struct BookDetailPageView: View {
                 .disabled(!viewModel.isButtonEnabled)
                 
                 Button(action: {
-                    
+                    viewModel.sendAction(.deleteBook(viewModel.bookModel.isbn))
                 }, label: {
                     Text("Delete")
                 })

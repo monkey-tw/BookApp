@@ -12,6 +12,7 @@ public enum ApiEndpoint {
     case bookList
     case addBook([String : Any])
     case updateBook(String, [String : Any])
+    case deleteBook(String)
 }
 
 extension ApiEndpoint: TargetType {
@@ -27,6 +28,8 @@ extension ApiEndpoint: TargetType {
             return "/book"
         case let .updateBook(id, _):
             return "/books/\(id)"
+        case let .deleteBook(id):
+            return "/books/\(id)"
         }
     }
     
@@ -38,6 +41,8 @@ extension ApiEndpoint: TargetType {
             return .post
         case .updateBook:
             return .put
+        case .deleteBook:
+            return .delete
         }
     }
     
@@ -49,6 +54,8 @@ extension ApiEndpoint: TargetType {
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         case .updateBook(_, let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .deleteBook:
+            return .requestPlain
         }
     }
     

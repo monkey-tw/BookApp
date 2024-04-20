@@ -54,6 +54,9 @@ class HomeViewController: UIHostingController<HomePageView> {
         NotificationCenter.default.addObserver(forName: .bookDidAdded, object: nil, queue: nil) {[weak self] _ in
             self?.viewModel.sendAction(.requestBookList)
         }
+        NotificationCenter.default.addObserver(forName: .bookDidDeleted, object: nil, queue: nil) {[weak self] _ in
+            self?.viewModel.sendAction(.requestBookList)
+        }
     }
     
     // MARK: - Event

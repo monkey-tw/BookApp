@@ -25,7 +25,7 @@ final class AddBookViewModel: ObservableObject {
             checkButtonStatus()
         }
     }
-    @Published var ISBN = "" {
+    @Published var isbn = "" {
         didSet {
             checkButtonStatus()
         }
@@ -70,12 +70,12 @@ final class AddBookViewModel: ObservableObject {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let publicationYear = dateFormatter.string(from: date)
-        let entity = BookEntity(title: bookTitle, author: author, publicationYear: publicationYear, ISBN: ISBN)
+        let entity = BookEntity(title: bookTitle, author: author, publicationYear: publicationYear, isbn: isbn)
         sendAction(.addBook(entity))
     }
     
     private func checkButtonStatus() {
-        if !bookTitle.isEmpty && !author.isEmpty && !ISBN.isEmpty {
+        if !bookTitle.isEmpty && !author.isEmpty && !isbn.isEmpty {
             isButtonEnabled = true
         } else {
             isButtonEnabled = false

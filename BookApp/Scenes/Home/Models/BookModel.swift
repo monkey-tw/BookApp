@@ -9,30 +9,30 @@ import Foundation
 
 struct BookModel: Identifiable {
     var id: String {
-        return ISBN
+        return isbn
     }
     let title: String
     let author: String
     let publicationYear: String
-    let ISBN: String
+    let isbn: String
     
-    init(title: String, author: String, publicationYear: String, ISBN: String) {
+    init(title: String, author: String, publicationYear: String, isbn: String) {
         self.title = title
         self.author = author
         self.publicationYear = publicationYear
-        self.ISBN = ISBN
+        self.isbn = isbn
     }
     
     init(from entity: BookEntity) {
         self.title = entity.title
         self.author = entity.author
         self.publicationYear = entity.publicationYear
-        self.ISBN = entity.ISBN
+        self.isbn = entity.isbn
     }
 }
 
 extension BookModel {
     func toEntity() -> BookEntity {
-        BookEntity(title: title, author: author, publicationYear: publicationYear, ISBN: ISBN)
+        BookEntity(title: title, author: author, publicationYear: publicationYear, isbn: isbn)
     }
 }

@@ -12,7 +12,7 @@ import Combine
 final class BookDetailViewModelTests: XCTestCase {
     var useCase: MockBookDetailUseCase!
     var sut: BookDetailViewModel!
-    let bookModel: BookModel = .init(title: "title1", author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
+    let bookModel: BookModel = .init(title: "title1", author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
     private var cancellable: Set<AnyCancellable> = .init()
     
     override func setUpWithError() throws {
@@ -27,7 +27,7 @@ final class BookDetailViewModelTests: XCTestCase {
         useCase = MockBookDetailUseCase(scenario: .success)
         sut = BookDetailViewModel(useCase: useCase, bookModel: bookModel)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
+        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "update a book successfully")
         sut.$newBook
             .dropFirst()
@@ -50,7 +50,7 @@ final class BookDetailViewModelTests: XCTestCase {
         useCase = MockBookDetailUseCase(scenario: .failed)
         sut = BookDetailViewModel(useCase: useCase, bookModel: bookModel)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
+        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "update a book failed")
         sut.$requestError
             .dropFirst()

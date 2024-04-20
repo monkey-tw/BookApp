@@ -28,7 +28,7 @@ final class AddBookViewModelTests: XCTestCase {
         useCase = MockAddBookUseCase(scenario: .success)
         sut = AddBookViewModel(useCase: useCase, navigator: navigator)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
+        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "add a book")
         sut.$newBook
             .dropFirst()
@@ -51,7 +51,7 @@ final class AddBookViewModelTests: XCTestCase {
         useCase = MockAddBookUseCase(scenario: .failed)
         sut = AddBookViewModel(useCase: useCase, navigator: navigator)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", ISBN: "ISBN1")
+        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "add a book then receive a error")
         sut.$requestError
             .dropFirst()

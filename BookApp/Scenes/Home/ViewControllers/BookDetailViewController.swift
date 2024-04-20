@@ -36,5 +36,17 @@ class BookDetailViewController: UIHostingController<BookDetailPageView> {
                 LoadingView.succeed("Update Book Successfully")
             }
         }.store(in: &cancellable)
+        
+        viewModel.$requestError.sink { error in
+            if let localizedDescription = error?.localizedDescription {
+                LoadingView.failed(localizedDescription)
+            }
+        }.store(in: &cancellable)
+        
+        viewModel.$deletedMessage.sink { message in
+            if message != nil {
+                LoadingView.succeed("Delete Book Successfully")
+            }
+        }.store(in: &cancellable)
     }
 }

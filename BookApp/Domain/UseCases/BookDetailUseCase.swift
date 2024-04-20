@@ -28,8 +28,7 @@ class StandardBookDetailUseCase: BookDetailUseCase {
     }
     
     func deleteBook(isbn: String) -> AnyPublisher<String, HttpError> {
-        return Just("succes")
-            .setFailureType(to: HttpError.self)
+        return repository.deleteBook(isbn: isbn)
             .eraseToAnyPublisher()
     }
 }

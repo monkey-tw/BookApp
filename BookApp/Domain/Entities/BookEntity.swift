@@ -12,5 +12,5 @@ struct BookEntity: Codable {
     let title: String
     let author: String
     let publicationYear: String
-    let ISBN: String
+    let isbn: String
 }
