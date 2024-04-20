@@ -23,7 +23,7 @@ extension ApiEndpoint: TargetType {
         case .bookList:
             return "/books"
         case .addBook:
-            return "/books"
+            return "/book"
         }
     }
     

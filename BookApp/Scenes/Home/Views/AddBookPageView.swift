@@ -6,9 +6,23 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AddBookPageView: View {
+    @ObservedObject var viewModel: AddBookViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            TextField("Book Title", text: $viewModel.bookTitle)
+            TextField("Book Author", text: $viewModel.author)
+            TextField("Book ISBN", text: $viewModel.ISBN)
+            DatePicker("DatePicker", selection: $viewModel.date, displayedComponents: [.date])
+            
+            Button {
+                viewModel.addBook()
+            } label: {
+                Text("Add a new book")
+            }.disabled(!viewModel.isButtonEnabled)
+        }
     }
 }

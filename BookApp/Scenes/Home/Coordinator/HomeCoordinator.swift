@@ -27,7 +27,10 @@ final class HomeCoordinator {
 
 extension HomeCoordinator: HomeNavigator {
     func pushToAddBookPage() {
-        let viewController = AddBookViewController()
+        let repository = StandardAddBookRepository(apiClient: dependencies.apiClient)
+        let useCase = StandardAddBookUseCase(repository: repository)
+        let viewModel = AddBookViewModel(useCase: useCase)
+        let viewController = AddBookViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: true)
     }
 }
