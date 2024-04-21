@@ -17,8 +17,8 @@ public class StandardApiClient: ApiClient {
     
     public func request<T: Decodable>(_ endpoint: ApiEndpoint) ->  AnyPublisher<T, HttpError> {
         return provider.requestPublisher(endpoint)
-            .map(ResponseWrapper<T>.self)
-            .map { $0.data }
+//            .map { $0.data }
+            .map(T.self)
             .mapError{ HttpError.serverError($0) }
             .eraseToAnyPublisher()
     }

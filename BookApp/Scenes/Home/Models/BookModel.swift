@@ -8,15 +8,14 @@
 import Foundation
 
 struct BookModel: Identifiable {
-    var id: String {
-        return isbn
-    }
+    var id: String
     let title: String
     let author: String
     let publicationYear: String
     let isbn: String
     
-    init(title: String, author: String, publicationYear: String, isbn: String) {
+    init(id: String, title: String, author: String, publicationYear: String, isbn: String) {
+        self.id = id
         self.title = title
         self.author = author
         self.publicationYear = publicationYear
@@ -24,6 +23,7 @@ struct BookModel: Identifiable {
     }
     
     init(from entity: BookEntity) {
+        self.id = entity.id
         self.title = entity.title
         self.author = entity.author
         self.publicationYear = entity.publicationYear
@@ -33,6 +33,6 @@ struct BookModel: Identifiable {
 
 extension BookModel {
     func toEntity() -> BookEntity {
-        BookEntity(title: title, author: author, publicationYear: publicationYear, isbn: isbn)
+        BookEntity(id: id, title: title, author: author, publicationYear: publicationYear, isbn: isbn)
     }
 }

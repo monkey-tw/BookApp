@@ -19,10 +19,10 @@ final class StandardBookDetailRepository: BookDetailRepository {
     
     func updateBook(entity: BookEntity) -> AnyPublisher<BookEntity, HttpError> {
         let params = DataTools.convertCodableToDict(entity) ?? [:]
-        return apiClient.request(.updateBook(entity.isbn, params))
+        return apiClient.request(.updateBook(entity.id, params))
     }
     
-    func deleteBook(isbn: String) -> AnyPublisher<String, HttpError> {
-        return apiClient.request(.deleteBook(isbn))
+    func deleteBook(id: String) -> AnyPublisher<BookEntity, HttpError> {
+        return apiClient.request(.deleteBook(id))
     }
 }

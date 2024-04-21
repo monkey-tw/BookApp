@@ -43,8 +43,8 @@ class BookDetailViewController: UIHostingController<BookDetailPageView> {
             }
         }.store(in: &cancellable)
         
-        viewModel.$deletedMessage.sink { message in
-            if message != nil {
+        viewModel.$deletedModel.sink { model in
+            if model != nil {
                 LoadingView.succeed("Delete Book Successfully")
             }
         }.store(in: &cancellable)

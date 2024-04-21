@@ -11,5 +11,5 @@ import Combine
 
 protocol BookDetailRepository {
     func updateBook(entity: BookEntity) -> AnyPublisher<BookEntity, HttpError>
-    func deleteBook(isbn: String) -> AnyPublisher<String, HttpError>
+    func deleteBook(id: String) -> AnyPublisher<BookEntity, HttpError>
 }

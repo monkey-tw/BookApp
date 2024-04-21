@@ -17,7 +17,7 @@ public enum ApiEndpoint {
 
 extension ApiEndpoint: TargetType {
     public var baseURL: URL {
-        return .init(string: "https://example.com")!
+        return .init(string: "http://localhost:8080")!
     }
     
     public var path: String {
@@ -25,7 +25,7 @@ extension ApiEndpoint: TargetType {
         case .bookList:
             return "/books"
         case .addBook:
-            return "/book"
+            return "/books"
         case let .updateBook(id, _):
             return "/books/\(id)"
         case let .deleteBook(id):

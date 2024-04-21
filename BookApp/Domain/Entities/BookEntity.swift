@@ -9,6 +9,7 @@ import Foundation
 import Platform
 
 struct BookEntity: Codable {
+    let id: String
     let title: String
     let author: String
     let publicationYear: String

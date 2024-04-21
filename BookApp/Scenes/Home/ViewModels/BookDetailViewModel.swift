@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Moya
 
 final class BookDetailViewModel: ObservableObject {
     enum Action {
@@ -15,7 +16,7 @@ final class BookDetailViewModel: ObservableObject {
     }
     @Published var requestError: Error?
     @Published var newBook: BookModel?
-    @Published var deletedMessage: String?
+    @Published var deletedModel: BookModel?
     
     let useCase: BookDetailUseCase
     let navigator: HomeNavigator
@@ -63,8 +64,8 @@ final class BookDetailViewModel: ObservableObject {
                     self.newBook = model
                     NotificationCenter.default.post(name: .bookDidUpdated, object: nil)
             }.store(in: &cancelable)
-        case .deleteBook(let isbn):
-            useCase.deleteBook(isbn: isbn)
+        case .deleteBook(let id):
+            useCase.deleteBook(id: id)
                 .sink { completion in
                     switch completion {
                     case .finished:
@@ -72,12 +73,19 @@ final class BookDetailViewModel: ObservableObject {
                     case .failure(let error):
                         self.requestError = error
                     }
-                } receiveValue: { message in
-                    self.deletedMessage = message
+                } receiveValue: { model in
+                    self.deletedModel = model
                     NotificationCenter.default.post(name: .bookDidDeleted, object: nil)
                     self.navigator.popToLastPage()
             }.store(in: &cancelable)
         }
+    }
+    
+    func getNewBookEntity() -> BookEntity {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let publicationYear = dateFormatter.string(from: date)
+        return .init(id: bookModel.id, title: bookTitle, author: author, publicationYear: publicationYear, isbn: bookModel.isbn)
     }
     
     private func checkButtonStatus() {

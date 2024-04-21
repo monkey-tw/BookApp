@@ -23,7 +23,7 @@ struct BookDetailPageView: View {
             
             HStack(spacing: 16) {
                 Button(action: {
-                    viewModel.sendAction(.updateBook(viewModel.bookModel.toEntity()))
+                    viewModel.sendAction(.updateBook(viewModel.getNewBookEntity()))
                 }, label: {
                     Text("Update")
                 })
@@ -31,7 +31,7 @@ struct BookDetailPageView: View {
                 .disabled(!viewModel.isButtonEnabled)
                 
                 Button(action: {
-                    viewModel.sendAction(.deleteBook(viewModel.bookModel.isbn))
+                    viewModel.sendAction(.deleteBook(viewModel.bookModel.id))
                 }, label: {
                     Text("Delete")
                 })

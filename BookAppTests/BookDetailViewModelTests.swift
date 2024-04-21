@@ -11,12 +11,14 @@ import Combine
 
 final class BookDetailViewModelTests: XCTestCase {
     var useCase: MockBookDetailUseCase!
+    var navigator: MockHomeNavigator!
     var sut: BookDetailViewModel!
-    let bookModel: BookModel = .init(title: "title1", author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
+    let bookModel: BookModel = .init(id: "id1", title: "title1", author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
     private var cancellable: Set<AnyCancellable> = .init()
     
     override func setUpWithError() throws {
         useCase = MockBookDetailUseCase(scenario: .success)
+        navigator = MockHomeNavigator()
     }
 
     override func tearDownWithError() throws {
@@ -25,9 +27,9 @@ final class BookDetailViewModelTests: XCTestCase {
     func test_whenClickUpdateButton_thenUpdateSuccessfully() {
         // Given
         useCase = MockBookDetailUseCase(scenario: .success)
-        sut = BookDetailViewModel(useCase: useCase, bookModel: bookModel)
+        sut = BookDetailViewModel(useCase: useCase, navigator: navigator, bookModel: bookModel)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
+        let entity: BookEntity = .init(id: "id", title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "update a book successfully")
         sut.$newBook
             .dropFirst()
@@ -48,9 +50,9 @@ final class BookDetailViewModelTests: XCTestCase {
     func test_whenClickUpdateButton_thenHasError() throws {
         // Given
         useCase = MockBookDetailUseCase(scenario: .failed)
-        sut = BookDetailViewModel(useCase: useCase, bookModel: bookModel)
+        sut = BookDetailViewModel(useCase: useCase, navigator: navigator, bookModel: bookModel)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
+        let entity: BookEntity = .init(id: "id", title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "update a book failed")
         sut.$requestError
             .dropFirst()
@@ -70,18 +72,18 @@ final class BookDetailViewModelTests: XCTestCase {
     func test_whenClickDeleteButton_thenUpdateSuccessfully() {
         // Given
         useCase = MockBookDetailUseCase(scenario: .success)
-        sut = BookDetailViewModel(useCase: useCase, bookModel: bookModel)
+        sut = BookDetailViewModel(useCase: useCase, navigator: navigator, bookModel: bookModel)
         let expectation = XCTestExpectation(description: "delete a book successfully")
-        sut.$deletedMessage
+        sut.$deletedModel
             .dropFirst()
-            .sink { message in
-                XCTAssertNotNil(message)
+            .sink { model in
+                XCTAssertNotNil(model)
                 expectation.fulfill()
             }
             .store(in: &cancellable)
         
         // When
-        sut.sendAction(.deleteBook("isbn"))
+        sut.sendAction(.deleteBook("id"))
         
         // Then
         wait(for: [expectation], timeout: 1)
@@ -90,7 +92,7 @@ final class BookDetailViewModelTests: XCTestCase {
     func test_whenClickDeleteButton_thenHasError() throws {
         // Given
         useCase = MockBookDetailUseCase(scenario: .failed)
-        sut = BookDetailViewModel(useCase: useCase, bookModel: bookModel)
+        sut = BookDetailViewModel(useCase: useCase, navigator: navigator, bookModel: bookModel)
         let expectation = XCTestExpectation(description: "delete a book successfully")
         sut.$requestError
             .dropFirst()
@@ -101,7 +103,7 @@ final class BookDetailViewModelTests: XCTestCase {
             .store(in: &cancellable)
         
         // When
-        sut.sendAction(.deleteBook("isbn"))
+        sut.sendAction(.deleteBook("id"))
         
         // Then
         wait(for: [expectation], timeout: 1)
