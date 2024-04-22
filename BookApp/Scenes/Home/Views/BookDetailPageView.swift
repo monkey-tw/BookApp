@@ -11,12 +11,15 @@ import Platform
 
 struct BookDetailPageView: View {
     @ObservedObject var viewModel: BookDetailViewModel
+    @State private var isDeleteAlertPresented: Bool = false
     
     var body: some View {
         Form {
             editGroup
             buttonGroup
-        }
+        }.alert(isPresented: $isDeleteAlertPresented, content: {
+            alertContent
+        })
     }
     
     var editGroup: some View {
@@ -57,11 +60,21 @@ struct BookDetailPageView: View {
             .disabled(!viewModel.isButtonEnabled)
             
             Button(action: {
-                viewModel.sendAction(.deleteBook(viewModel.bookModel.id))
+                isDeleteAlertPresented = true
             }, label: {
                 Text("Delete")
             })
             .buttonStyle(RoundedRectangleButtonStyle(labelColor: .red))
         }
+    }
+    
+    var alertContent: Alert {
+        Alert(
+            title: Text("Are you sure to delete the book?"),
+            primaryButton: .cancel(Text("Cancel"), action: {}),
+            secondaryButton: .default(Text("Delete"), action: {
+                viewModel.sendAction(.deleteBook(viewModel.bookModel.id))
+            })
+        )
     }
 }
