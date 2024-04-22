@@ -14,6 +14,13 @@ struct BookDetailPageView: View {
     
     var body: some View {
         Form {
+            editGroup
+            buttonGroup
+        }
+    }
+    
+    var editGroup: some View {
+        Group {
             Text("Click text to edit, exclude isbn")
                 .foregroundColor(.gray)
             HStack {
@@ -36,23 +43,25 @@ struct BookDetailPageView: View {
                     .foregroundColor(.gray)
                 DatePicker("", selection: $viewModel.publicationDate, displayedComponents: [.date])
             }
+        }
+    }
+    
+    var buttonGroup: some View {
+        HStack(spacing: 16) {
+            Button(action: {
+                viewModel.sendAction(.updateBook(viewModel.getNewBookEntity()))
+            }, label: {
+                Text("Update")
+            })
+            .buttonStyle(RoundedRectangleButtonStyle())
+            .disabled(!viewModel.isButtonEnabled)
             
-            HStack(spacing: 16) {
-                Button(action: {
-                    viewModel.sendAction(.updateBook(viewModel.getNewBookEntity()))
-                }, label: {
-                    Text("Update")
-                })
-                .buttonStyle(RoundedRectangleButtonStyle())
-                .disabled(!viewModel.isButtonEnabled)
-                
-                Button(action: {
-                    viewModel.sendAction(.deleteBook(viewModel.bookModel.id))
-                }, label: {
-                    Text("Delete")
-                })
-                .buttonStyle(RoundedRectangleButtonStyle(labelColor: .red))
-            }
+            Button(action: {
+                viewModel.sendAction(.deleteBook(viewModel.bookModel.id))
+            }, label: {
+                Text("Delete")
+            })
+            .buttonStyle(RoundedRectangleButtonStyle(labelColor: .red))
         }
     }
 }
