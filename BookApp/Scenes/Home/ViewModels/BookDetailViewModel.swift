@@ -37,7 +37,7 @@ final class BookDetailViewModel: ObservableObject {
             checkButtonStatus()
         }
     }
-    @Published var date: Date = .init()
+    @Published var publicationDate: Date = .init()
     @Published var isButtonEnabled = false
     let loadStatus: PassthroughSubject<LoadStatus<LoadSucces>, Never> = .init()
     
@@ -50,7 +50,7 @@ final class BookDetailViewModel: ObservableObject {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         if let date = dateFormatter.date(from: bookModel.publicationYear) {
-            self.date = date
+            self.publicationDate = date
         }
     }
     
@@ -93,7 +93,7 @@ final class BookDetailViewModel: ObservableObject {
     func getNewBookEntity() -> BookEntity {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        let publicationYear = dateFormatter.string(from: date)
+        let publicationYear = dateFormatter.string(from: publicationDate)
         return .init(id: bookModel.id, title: bookTitle, author: author, publicationYear: publicationYear, isbn: bookModel.isbn)
     }
     

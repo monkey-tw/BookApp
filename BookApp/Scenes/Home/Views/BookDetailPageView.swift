@@ -16,10 +16,26 @@ struct BookDetailPageView: View {
         Form {
             Text("Click text to edit, exclude isbn")
                 .foregroundColor(.gray)
-            TextField("Book Title", text: $viewModel.bookTitle)
-            TextField("Book Author", text: $viewModel.author)
-            Text(viewModel.bookModel.isbn)
-            DatePicker("DatePicker", selection: $viewModel.date, displayedComponents: [.date])
+            HStack {
+                Text("Book Title:")
+                    .foregroundColor(.gray)
+                TextField("Book Title", text: $viewModel.bookTitle)
+            }
+            HStack {
+                Text("Book Author:")
+                    .foregroundColor(.gray)
+                TextField("Book Author", text: $viewModel.author)
+            }
+            HStack {
+                Text("ISBN:")
+                    .foregroundColor(.gray)
+                Text(viewModel.bookModel.isbn)
+            }
+            HStack {
+                Text("Publication Year:")
+                    .foregroundColor(.gray)
+                DatePicker("", selection: $viewModel.publicationDate, displayedComponents: [.date])
+            }
             
             HStack(spacing: 16) {
                 Button(action: {
