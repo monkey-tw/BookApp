@@ -16,7 +16,7 @@ class HomeViewModel: ObservableObject {
         case pushToBookDetailPage(BookModel)
     }
     @Published var books: [BookModel] = []
-    let loadStatus: PassthroughSubject<LoadStatus, Never> = .init()
+    let loadStatus: PassthroughSubject<LoadStatus<Void>, Never> = .init()
     
     let useCase: HomeUseCase
     let navigator: HomeNavigator
@@ -46,7 +46,7 @@ class HomeViewModel: ObservableObject {
                 } receiveValue: { books in
                     self.books = books
                     if isShowLoading {
-                        self.loadStatus.send(.loadSuccess)
+                        self.loadStatus.send(.loadSuccess(()))
                     }
                 }.store(in: &cancelable)
         case .pushToAddBookPage:

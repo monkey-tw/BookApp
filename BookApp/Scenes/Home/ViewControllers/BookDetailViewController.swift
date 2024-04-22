@@ -31,22 +31,24 @@ class BookDetailViewController: UIHostingController<BookDetailPageView> {
     }
 
     private func setupBindings() {
-        viewModel.$newBook.sink { model in
-            if model != nil {
-                LoadingView.succeed("Update Book Successfully")
+        
+        viewModel.loadStatus.sink { status in
+            switch status {
+            case .loading:
+                LoadingView.show()
+            case .loadSuccess(let type):
+                switch type {
+                case .deleteBook:
+                    LoadingView.succeed("Delete Book Successfully")
+                case .updateBook:
+                    LoadingView.succeed("Update Book Successfully")
+                }
+            case .loadFailure(let error):
+                if let localizedDescription = error?.localizedDescription {
+                    LoadingView.failed(localizedDescription)
+                }
             }
         }.store(in: &cancellable)
         
-        viewModel.$requestError.sink { error in
-            if let localizedDescription = error?.localizedDescription {
-                LoadingView.failed(localizedDescription)
-            }
-        }.store(in: &cancellable)
-        
-        viewModel.$deletedModel.sink { model in
-            if model != nil {
-                LoadingView.succeed("Delete Book Successfully")
-            }
-        }.store(in: &cancellable)
     }
 }

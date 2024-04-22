@@ -1,7 +1,7 @@
 import Foundation
 
-public enum LoadStatus {
+public enum LoadStatus<T> {
     case loading
-    case loadSuccess
+    case loadSuccess(T)
     case loadFailure(Error?)
 }

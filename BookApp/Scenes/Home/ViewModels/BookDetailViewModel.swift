@@ -8,13 +8,17 @@
 import Foundation
 import Combine
 import Moya
+import Platform
 
 final class BookDetailViewModel: ObservableObject {
     enum Action {
         case updateBook(BookEntity)
         case deleteBook(String)
     }
-    @Published var requestError: Error?
+    enum LoadSucces {
+        case updateBook
+        case deleteBook
+    }
     @Published var newBook: BookModel?
     @Published var deletedModel: BookModel?
     
@@ -35,6 +39,7 @@ final class BookDetailViewModel: ObservableObject {
     }
     @Published var date: Date = .init()
     @Published var isButtonEnabled = false
+    let loadStatus: PassthroughSubject<LoadStatus<LoadSucces>, Never> = .init()
     
     init(useCase: BookDetailUseCase, navigator: HomeNavigator, bookModel: BookModel) {
         self.useCase = useCase
@@ -52,29 +57,33 @@ final class BookDetailViewModel: ObservableObject {
     func sendAction(_ action: Action) {
         switch action {
         case .updateBook(let entity):
+            loadStatus.send(.loading)
             useCase.updateBook(entity: entity)
                 .sink { completion in
                     switch completion {
                     case .finished:
                         break
                     case .failure(let error):
-                        self.requestError = error
+                        self.loadStatus.send(.loadFailure(error))
                     }
                 } receiveValue: { model in
                     self.newBook = model
+                    self.loadStatus.send(.loadSuccess(.updateBook))
                     NotificationCenter.default.post(name: .bookDidUpdated, object: nil)
             }.store(in: &cancelable)
         case .deleteBook(let id):
+            loadStatus.send(.loading)
             useCase.deleteBook(id: id)
                 .sink { completion in
                     switch completion {
                     case .finished:
                         break
                     case .failure(let error):
-                        self.requestError = error
+                        self.loadStatus.send(.loadFailure(error))
                     }
                 } receiveValue: { model in
                     self.deletedModel = model
+                    self.loadStatus.send(.loadSuccess(.deleteBook))
                     NotificationCenter.default.post(name: .bookDidDeleted, object: nil)
                     self.navigator.popToLastPage()
             }.store(in: &cancelable)

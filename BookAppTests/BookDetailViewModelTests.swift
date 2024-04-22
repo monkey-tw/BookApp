@@ -54,11 +54,12 @@ final class BookDetailViewModelTests: XCTestCase {
         let bookTitle = "title1"
         let entity: BookEntity = .init(id: "id", title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "update a book failed")
-        sut.$requestError
+        sut.loadStatus
             .dropFirst()
-            .sink { error in
-                XCTAssertNotNil(error)
-                expectation.fulfill()
+            .sink { status in
+                if case .loadFailure = status {
+                    expectation.fulfill()
+                }
             }
             .store(in: &cancellable)
         
@@ -94,11 +95,12 @@ final class BookDetailViewModelTests: XCTestCase {
         useCase = MockBookDetailUseCase(scenario: .failed)
         sut = BookDetailViewModel(useCase: useCase, navigator: navigator, bookModel: bookModel)
         let expectation = XCTestExpectation(description: "delete a book successfully")
-        sut.$requestError
+        sut.loadStatus
             .dropFirst()
-            .sink { error in
-                XCTAssertNotNil(error)
-                expectation.fulfill()
+            .sink { status in
+                if case .loadFailure = status {
+                    expectation.fulfill()
+                }
             }
             .store(in: &cancellable)
         

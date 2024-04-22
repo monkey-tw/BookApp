@@ -14,7 +14,6 @@ final class AddBookViewModel: ObservableObject {
         case addBook(BookEntity)
         case backToHomePage
     }
-    @Published var requestError: Error?
     @Published var newBook: BookModel?
     @Published var bookTitle = "" {
         didSet {
@@ -37,7 +36,7 @@ final class AddBookViewModel: ObservableObject {
         }
     }
     @Published var isButtonEnabled = false
-    let loadStatus: PassthroughSubject<LoadStatus, Never> = .init()
+    let loadStatus: PassthroughSubject<LoadStatus<Void>, Never> = .init()
     
     let useCase: AddBookUseCase
     let navigator: HomeNavigator
@@ -62,7 +61,7 @@ final class AddBookViewModel: ObservableObject {
                     }
                 } receiveValue: { model in
                     self.newBook = model
-                    self.loadStatus.send(.loadSuccess)
+                    self.loadStatus.send(.loadSuccess(()))
                     NotificationCenter.default.post(name: .bookDidAdded, object: nil)
             }.store(in: &cancelable)
         case .backToHomePage:
