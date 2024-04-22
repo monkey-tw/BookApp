@@ -14,6 +14,13 @@ struct AddBookPageView: View {
     
     var body: some View {
         Form {
+            inputGroup
+            buttonGroup
+        }
+    }
+    
+    var inputGroup: some View {
+        Group {
             HStack {
                 Text("Book Title:")
                     .foregroundColor(.gray)
@@ -34,7 +41,11 @@ struct AddBookPageView: View {
                     .foregroundColor(.gray)
                 DatePicker("", selection: $viewModel.date, displayedComponents: [.date])
             }
-            
+        }
+    }
+    
+    var buttonGroup: some View {
+        Group {
             Button {
                 viewModel.addBook()
             } label: {
