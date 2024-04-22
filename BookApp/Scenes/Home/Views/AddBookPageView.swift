@@ -14,10 +14,26 @@ struct AddBookPageView: View {
     
     var body: some View {
         Form {
-            TextField("Book Title", text: $viewModel.bookTitle)
-            TextField("Book Author", text: $viewModel.author)
-            TextField("Book isbn", text: $viewModel.isbn)
-            DatePicker("DatePicker", selection: $viewModel.date, displayedComponents: [.date])
+            HStack {
+                Text("Book Title:")
+                    .foregroundColor(.gray)
+                TextField("Input Book Title", text: $viewModel.bookTitle)
+            }
+            HStack {
+                Text("Book Author:")
+                    .foregroundColor(.gray)
+                TextField("Input Book Author", text: $viewModel.author)
+            }
+            HStack {
+                Text("ISBN:")
+                    .foregroundColor(.gray)
+                TextField("Input Book isbn", text: $viewModel.isbn)
+            }
+            HStack {
+                Text("Publication Year:")
+                    .foregroundColor(.gray)
+                DatePicker("", selection: $viewModel.date, displayedComponents: [.date])
+            }
             
             Button {
                 viewModel.addBook()

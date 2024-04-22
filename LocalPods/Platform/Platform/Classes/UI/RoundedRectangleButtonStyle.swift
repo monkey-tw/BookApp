@@ -2,6 +2,8 @@ import Foundation
 import SwiftUI
 
 public struct RoundedRectangleButtonStyle: ButtonStyle {
+    @Environment(\.isEnabled) private var isEnabled: Bool
+    
     let labelColor: Color
     public init(labelColor: Color = .black) {
         self.labelColor = labelColor
@@ -14,7 +16,7 @@ public struct RoundedRectangleButtonStyle: ButtonStyle {
             Spacer()
         }
         .padding()
-        .background(Color.yellow.cornerRadius(8))
+        .background(isEnabled ? Color.yellow.cornerRadius(8) : Color.gray.cornerRadius(8))
         .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
 }
