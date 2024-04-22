@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Platform
 
 final class AddBookViewModel: ObservableObject {
     enum Action {
@@ -36,6 +37,7 @@ final class AddBookViewModel: ObservableObject {
         }
     }
     @Published var isButtonEnabled = false
+    let loadStatus: PassthroughSubject<LoadStatus, Never> = .init()
     
     let useCase: AddBookUseCase
     let navigator: HomeNavigator
@@ -49,16 +51,18 @@ final class AddBookViewModel: ObservableObject {
     func sendAction(_ action: Action) {
         switch action {
         case .addBook(let entity):
+            loadStatus.send(.loading)
             useCase.addBook(entity: entity)
                 .sink { completion in
                     switch completion {
                     case .finished:
                         break
                     case .failure(let error):
-                        self.requestError = error
+                        self.loadStatus.send(.loadFailure(error))
                     }
                 } receiveValue: { model in
                     self.newBook = model
+                    self.loadStatus.send(.loadSuccess)
                     NotificationCenter.default.post(name: .bookDidAdded, object: nil)
             }.store(in: &cancelable)
         case .backToHomePage:

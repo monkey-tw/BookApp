@@ -32,7 +32,7 @@ class HomeViewController: UIHostingController<HomePageView> {
         setupBindings()
         setupNotifications()
         
-        viewModel.sendAction(.requestBookList)
+        viewModel.sendAction(.requestBookList(isShowLoading: true))
     }
     
     private func setupViews() {
@@ -56,13 +56,13 @@ class HomeViewController: UIHostingController<HomePageView> {
     
     private func setupNotifications() {
         NotificationCenter.default.addObserver(forName: .bookDidUpdated, object: nil, queue: nil) {[weak self] _ in
-            self?.viewModel.sendAction(.requestBookList)
+            self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
         NotificationCenter.default.addObserver(forName: .bookDidAdded, object: nil, queue: nil) {[weak self] _ in
-            self?.viewModel.sendAction(.requestBookList)
+            self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
         NotificationCenter.default.addObserver(forName: .bookDidDeleted, object: nil, queue: nil) {[weak self] _ in
-            self?.viewModel.sendAction(.requestBookList)
+            self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
     }
     

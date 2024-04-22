@@ -37,7 +37,7 @@ final class HomeViewModelTests: XCTestCase {
             .store(in: &cancellable)
         
         // When
-        sut.sendAction(.requestBookList)
+        sut.sendAction(.requestBookList(isShowLoading: true))
         
         // Then
         wait(for: [expectation], timeout: 1)
@@ -58,7 +58,7 @@ final class HomeViewModelTests: XCTestCase {
             .store(in: &cancellable)
         
         // When
-        sut.sendAction(.requestBookList)
+        sut.sendAction(.requestBookList(isShowLoading: true))
         
         // Then
         wait(for: [expectation], timeout: 1)

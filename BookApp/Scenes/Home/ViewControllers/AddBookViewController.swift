@@ -31,16 +31,17 @@ class AddBookViewController: UIHostingController<AddBookPageView> {
     }
     
     private func setupBindings() {
-        viewModel.$newBook.sink {[weak self] model in
-            if model != nil {
+        viewModel.loadStatus.sink {[weak self] status in
+            switch status {
+            case .loading:
+                LoadingView.show()
+            case .loadSuccess:
                 LoadingView.succeed("Add Book Successfully")
                 self?.viewModel.sendAction(.backToHomePage)
-            }
-        }.store(in: &cancellable)
-        
-        viewModel.$requestError.sink { error in
-            if let localizedDescription = error?.localizedDescription {
-                LoadingView.failed(localizedDescription)
+            case .loadFailure(let error):
+                if let localizedDescription = error?.localizedDescription {
+                    LoadingView.failed(localizedDescription)
+                }
             }
         }.store(in: &cancellable)
     }

@@ -11,7 +11,7 @@ import Platform
 
 class HomeViewModel: ObservableObject {
     enum Action {
-        case requestBookList
+        case requestBookList(isShowLoading: Bool)
         case pushToAddBookPage
         case pushToBookDetailPage(BookModel)
     }
@@ -29,19 +29,25 @@ class HomeViewModel: ObservableObject {
     
     func sendAction(_ action: Action) {
         switch action {
-        case .requestBookList:
-            self.loadStatus.send(.loading)
+        case .requestBookList(let isShowLoading):
+            if isShowLoading {
+                self.loadStatus.send(.loading)
+            }
             useCase.requestBookList()
                 .sink { completion in
                     switch completion {
                     case .finished:
                         break
                     case .failure(let error):
-                        self.loadStatus.send(.loadFailure(error))
+                        if isShowLoading {
+                            self.loadStatus.send(.loadFailure(error))
+                        }
                     }
                 } receiveValue: { books in
                     self.books = books
-                    self.loadStatus.send(.loadSuccess)
+                    if isShowLoading {
+                        self.loadStatus.send(.loadSuccess)
+                    }
                 }.store(in: &cancelable)
         case .pushToAddBookPage:
             self.navigator.pushToAddBookPage()

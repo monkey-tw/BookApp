@@ -53,11 +53,12 @@ final class AddBookViewModelTests: XCTestCase {
         let bookTitle = "title1"
         let entity: BookEntity = .init(id: "id1", title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
         let expectation = XCTestExpectation(description: "add a book then receive a error")
-        sut.$requestError
+        sut.loadStatus
             .dropFirst()
-            .sink { error in
-                XCTAssertNotNil(error)
-                expectation.fulfill()
+            .sink { status in
+                if case .loadFailure(_) = status {
+                    expectation.fulfill()
+                }
             }
             .store(in: &cancellable)
         
