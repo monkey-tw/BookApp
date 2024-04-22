@@ -40,9 +40,16 @@ class HomeViewController: UIHostingController<HomePageView> {
     }
 
     private func setupBindings() {
-        viewModel.$requestError.sink { error in
-            if let localizedDescription = error?.localizedDescription {
-                LoadingView.failed(localizedDescription)
+        viewModel.loadStatus.sink { status in
+            switch status {
+            case .loading:
+                LoadingView.show()
+            case .loadSuccess:
+                LoadingView.hide()
+            case .loadFailure(let error):
+                if let localizedDescription = error?.localizedDescription {
+                    LoadingView.failed(localizedDescription)
+                }
             }
         }.store(in: &cancellable)
     }

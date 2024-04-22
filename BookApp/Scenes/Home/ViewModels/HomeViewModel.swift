@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Platform
 
 class HomeViewModel: ObservableObject {
     enum Action {
@@ -15,7 +16,7 @@ class HomeViewModel: ObservableObject {
         case pushToBookDetailPage(BookModel)
     }
     @Published var books: [BookModel] = []
-    @Published var requestError: Error?
+    let loadStatus: PassthroughSubject<LoadStatus, Never> = .init()
     
     let useCase: HomeUseCase
     let navigator: HomeNavigator
@@ -29,17 +30,19 @@ class HomeViewModel: ObservableObject {
     func sendAction(_ action: Action) {
         switch action {
         case .requestBookList:
+            self.loadStatus.send(.loading)
             useCase.requestBookList()
                 .sink { completion in
                     switch completion {
                     case .finished:
                         break
                     case .failure(let error):
-                        self.requestError = error
+                        self.loadStatus.send(.loadFailure(error))
                     }
                 } receiveValue: { books in
-                self.books = books
-            }.store(in: &cancelable)
+                    self.books = books
+                    self.loadStatus.send(.loadSuccess)
+                }.store(in: &cancelable)
         case .pushToAddBookPage:
             self.navigator.pushToAddBookPage()
         case let .pushToBookDetailPage(model):

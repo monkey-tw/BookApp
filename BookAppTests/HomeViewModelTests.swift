@@ -48,11 +48,12 @@ final class HomeViewModelTests: XCTestCase {
         useCase = MockHomeUseCase(scenario: .failed)
         sut = HomeViewModel(useCase: useCase, navigator: navigator)
         let expectation = XCTestExpectation(description: "receive server error")
-        sut.$requestError
+        sut.loadStatus
             .dropFirst()
-            .sink { error in
-                XCTAssertTrue(error != nil)
-                expectation.fulfill()
+            .sink { status in
+                if case .loadFailure(_) = status {
+                    expectation.fulfill()
+                }
             }
             .store(in: &cancellable)
         
