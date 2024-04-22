@@ -20,9 +20,14 @@ Clone Backend project via: `git clone https://github.com/monkey-tw/BookServer.gi
 - Run: `chmod +x BuildAndRun.sh` if you get permission denied error
 
 # Run Backend project via IntelliJ IDEA
-- In case there are some error in `Run Backend project via IntelliJ IDEA` stage, you can try this.
+- In case there are some errors in `Run Backend project via IntelliJ IDEA` stage, you can try this.
 - Open BookServer project via IntelliJ IDEA
 - Click `Run` button in the top menu, then click `Run 'BookServerApplication'`
 
 # Test BookApp
 - After you run Backend project, you can test BookApp via iOS simulator
+
+# Achitecture
+- MVVM + Clean Architecture based on Combine.
+- Navigation based on UIKit, page view UI based on SwiftUI.
+- Modularized based on CocoaPods.
