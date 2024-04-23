@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import Networking
 
 struct SettingsPageView: View {
+    @ObservedObject var viewModel: SettingsViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            HStack {
+                Text("Base url channel")
+                Picker(selection: $viewModel.channel, label: Text("channel")) {
+                    Text("AWS").tag(BaseUrlChannel.aws)
+                    Text("Local").tag(BaseUrlChannel.local)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+        }
     }
-}
-
-#Preview {
-    SettingsPageView()
 }

@@ -7,12 +7,16 @@
 
 import UIKit
 import SwiftUI
+import Combine
+import Platform
 
 class SettingsViewController: UIHostingController<SettingsPageView> {
-    
+    let viewModel: SettingsViewModel
+    private var cancellable: Set<AnyCancellable> = .init()
 
-    init() {
-        let pageView = SettingsPageView()
+    init(viewModel: SettingsViewModel) {
+        self.viewModel = viewModel
+        let pageView = SettingsPageView(viewModel: viewModel)
         super.init(rootView: pageView)
     }
     
@@ -24,17 +28,15 @@ class SettingsViewController: UIHostingController<SettingsPageView> {
         super.viewDidLoad()
 
         title = "Settings"
+        
+        setupBindings()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupBindings() {
+        viewModel.$channel
+            .dropFirst()
+            .sink { channel in
+                LoadingView.succeed("Updated base url to \(channel)")
+            }.store(in: &cancellable)
     }
-    */
-
 }

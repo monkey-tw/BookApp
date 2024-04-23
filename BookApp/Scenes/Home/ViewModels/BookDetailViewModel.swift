@@ -65,6 +65,12 @@ final class BookDetailViewModel: ObservableObject {
                         break
                     case .failure(let error):
                         self.loadStatus.send(.loadFailure(error))
+                        switch error {
+                        case .serverError(let innerError):
+                            if let moyaError = innerError as? MoyaError {
+                                print(String(data: moyaError.response!.data, encoding: .utf8))
+                            }
+                        }
                     }
                 } receiveValue: { model in
                     self.newBook = model

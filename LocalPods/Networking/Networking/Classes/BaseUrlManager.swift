@@ -17,6 +17,14 @@ public protocol BaseUrlManager {
 }
 
 public class StandardBaseUrlManager: BaseUrlManager {
-    public var channel: BaseUrlChannel = .aws
+    public var channel: BaseUrlChannel = .aws {
+        didSet {
+            NotificationCenter.default.post(name: .baseUrlChannelDidUpdated, object: nil)
+        }
+    }
     public static let instance: StandardBaseUrlManager = .init()
+}
+
+public extension Notification.Name {
+    static let baseUrlChannelDidUpdated: Notification.Name = .init("com.book.notification.baseUrlChannelDidUpdated")
 }

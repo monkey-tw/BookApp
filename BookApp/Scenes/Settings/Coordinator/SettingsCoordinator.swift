@@ -17,7 +17,8 @@ final class SettingsCoordinator {
     }
     
     func start() {
-        let viewController = SettingsViewController()
+        let viewModel = SettingsViewModel(baseUrlManager: dependencies.baseUrlManager)
+        let viewController = SettingsViewController(viewModel: viewModel)
         navigationController.viewControllers = [viewController]
     }
 }

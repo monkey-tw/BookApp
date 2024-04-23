@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 import Combine
 import Platform
+import Networking
 
 class HomeViewController: UIHostingController<HomePageView> {
     let viewModel: HomeViewModel
@@ -62,6 +63,9 @@ class HomeViewController: UIHostingController<HomePageView> {
             self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
         NotificationCenter.default.addObserver(forName: .bookDidDeleted, object: nil, queue: nil) {[weak self] _ in
+            self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
+        }
+        NotificationCenter.default.addObserver(forName: .baseUrlChannelDidUpdated, object: nil, queue: nil) {[weak self] _ in
             self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
     }

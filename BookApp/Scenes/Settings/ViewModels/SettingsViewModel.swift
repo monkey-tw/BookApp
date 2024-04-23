@@ -6,13 +6,19 @@
 //
 
 import Foundation
+import Combine
 import Networking
 
-class SettingsViewModel {
+class SettingsViewModel: ObservableObject {
     enum Action {
         case changeChannel(BaseUrlChannel)
     }
-    var baseUrlManager: BaseUrlManager
+    private var baseUrlManager: BaseUrlManager
+    @Published var channel: BaseUrlChannel = .aws {
+        didSet {
+            sendAction(.changeChannel(channel))
+        }
+    }
     
     init(baseUrlManager: BaseUrlManager) {
         self.baseUrlManager = baseUrlManager
