@@ -13,18 +13,18 @@ public enum BaseUrlChannel: String {
 }
 
 public protocol BaseUrlManager {
-    var channel: BaseUrlChannel { set get }
+    var channel: BaseUrlChannel { get set }
 }
 
 public class StandardBaseUrlManager: BaseUrlManager {
     public var channel: BaseUrlChannel {
-        set {
-            UserDefaults.standard.setValue(newValue.rawValue, forKey: baseUrlChannelKey)
-            NotificationCenter.default.post(name: .baseUrlChannelDidUpdated, object: nil)
-        }
         get {
             let channelString = UserDefaults.standard.string(forKey: baseUrlChannelKey)
             return BaseUrlChannel(rawValue: channelString ?? "") ?? .aws
+        }
+        set {
+            UserDefaults.standard.setValue(newValue.rawValue, forKey: baseUrlChannelKey)
+            NotificationCenter.default.post(name: .baseUrlChannelDidUpdated, object: nil)
         }
     }
     public static let instance: StandardBaseUrlManager = .init()

@@ -49,4 +49,3 @@ extension HomeCoordinator: HomeNavigator {
         navigationController.pushViewController(viewController, animated: true)
     }
 }
-

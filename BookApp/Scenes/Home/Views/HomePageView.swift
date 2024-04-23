@@ -14,7 +14,8 @@ struct HomePageView: View {
     var body: some View {
         List {
             ForEach(viewModel.books.indices, id: \.self) { index  in
-                HomeBookItemView(bookModel: viewModel.books[index], bookIconName: viewModel.getBookIconName(index)).onTapGesture(perform: {
+                HomeBookItemView(bookModel: viewModel.books[index], bookIconName: viewModel.getBookIconName(index))
+                    .onTapGesture(perform: {
                     viewModel.sendAction(.pushToBookDetailPage(viewModel.books[index]))
                 })
             }

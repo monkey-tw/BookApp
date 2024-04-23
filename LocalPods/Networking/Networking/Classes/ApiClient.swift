@@ -15,11 +15,10 @@ public class StandardApiClient: ApiClient {
     public init() {
     }
     
-    public func request<T: Decodable>(_ endpoint: ApiEndpoint) ->  AnyPublisher<T, HttpError> {
+    public func request<T: Decodable>(_ endpoint: ApiEndpoint) -> AnyPublisher<T, HttpError> {
         return provider.requestPublisher(endpoint)
-//            .map { $0.data }
             .map(T.self)
-            .mapError{ HttpError.serverError($0) }
+            .mapError { HttpError.serverError($0) }
             .eraseToAnyPublisher()
     }
 }

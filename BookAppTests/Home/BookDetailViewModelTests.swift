@@ -13,7 +13,13 @@ final class BookDetailViewModelTests: XCTestCase {
     var useCase: MockBookDetailUseCase!
     var navigator: MockHomeNavigator!
     var sut: BookDetailViewModel!
-    let bookModel: BookModel = .init(id: "id1", title: "title1", author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
+    let bookModel: BookModel = .init(
+        id: "id1",
+        title: "title1",
+        author: "author1",
+        publicationYear: "publicationYear1",
+        isbn: "isbn1"
+    )
     private var cancellable: Set<AnyCancellable> = .init()
     
     override func setUpWithError() throws {
@@ -31,7 +37,13 @@ final class BookDetailViewModelTests: XCTestCase {
         useCase = MockBookDetailUseCase(scenario: .success)
         sut = BookDetailViewModel(useCase: useCase, navigator: navigator, bookModel: bookModel)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(id: "id", title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
+        let entity: BookEntity = .init(
+            id: "id",
+            title: bookTitle,
+            author: "author1",
+            publicationYear: "publicationYear1",
+            isbn: "isbn1"
+        )
         let expectation = XCTestExpectation(description: "update a book successfully")
         sut.$newBook
             .dropFirst()
@@ -54,7 +66,13 @@ final class BookDetailViewModelTests: XCTestCase {
         useCase = MockBookDetailUseCase(scenario: .failed)
         sut = BookDetailViewModel(useCase: useCase, navigator: navigator, bookModel: bookModel)
         let bookTitle = "title1"
-        let entity: BookEntity = .init(id: "id", title: bookTitle, author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
+        let entity: BookEntity = .init(
+            id: "id",
+            title: bookTitle,
+            author: "author1",
+            publicationYear: "publicationYear1",
+            isbn: "isbn1"
+        )
         let expectation = XCTestExpectation(description: "update a book failed")
         sut.loadStatus
             .dropFirst()

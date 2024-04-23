@@ -37,7 +37,12 @@ class HomeViewController: UIHostingController<HomePageView> {
     }
     
     private func setupViews() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addButtonDidCilcked))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Add",
+            style: .plain,
+            target: self,
+            action: #selector(addButtonDidCilcked)
+        )
     }
 
     private func setupBindings() {
@@ -56,16 +61,24 @@ class HomeViewController: UIHostingController<HomePageView> {
     }
     
     private func setupNotifications() {
-        NotificationCenter.default.addObserver(forName: .bookDidUpdated, object: nil, queue: nil) {[weak self] _ in
+        NotificationCenter
+            .default
+            .addObserver(forName: .bookDidUpdated, object: nil, queue: nil) {[weak self] _ in
             self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
-        NotificationCenter.default.addObserver(forName: .bookDidAdded, object: nil, queue: nil) {[weak self] _ in
+        NotificationCenter
+            .default
+            .addObserver(forName: .bookDidAdded, object: nil, queue: nil) {[weak self] _ in
             self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
-        NotificationCenter.default.addObserver(forName: .bookDidDeleted, object: nil, queue: nil) {[weak self] _ in
+        NotificationCenter
+            .default
+            .addObserver(forName: .bookDidDeleted, object: nil, queue: nil) {[weak self] _ in
             self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
-        NotificationCenter.default.addObserver(forName: .baseUrlChannelDidUpdated, object: nil, queue: nil) {[weak self] _ in
+        NotificationCenter
+            .default
+            .addObserver(forName: .baseUrlChannelDidUpdated, object: nil, queue: nil) {[weak self] _ in
             self?.viewModel.sendAction(.requestBookList(isShowLoading: false))
         }
     }
@@ -75,4 +88,3 @@ class HomeViewController: UIHostingController<HomePageView> {
         viewModel.sendAction(.pushToAddBookPage)
     }
 }
-

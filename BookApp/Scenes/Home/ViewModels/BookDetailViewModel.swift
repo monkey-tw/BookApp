@@ -65,12 +65,6 @@ final class BookDetailViewModel: ObservableObject {
                         break
                     case .failure(let error):
                         self.loadStatus.send(.loadFailure(error))
-                        switch error {
-                        case .serverError(let innerError):
-                            if let moyaError = innerError as? MoyaError {
-                                print(String(data: moyaError.response!.data, encoding: .utf8))
-                            }
-                        }
                     }
                 } receiveValue: { model in
                     self.newBook = model
@@ -100,7 +94,13 @@ final class BookDetailViewModel: ObservableObject {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let publicationYear = dateFormatter.string(from: publicationDate)
-        return .init(id: bookModel.id, title: bookTitle, author: author, publicationYear: publicationYear, isbn: bookModel.isbn)
+        return .init(
+            id: bookModel.id,
+            title: bookTitle,
+            author: author,
+            publicationYear: publicationYear,
+            isbn: bookModel.isbn
+        )
     }
     
     private func checkButtonStatus() {

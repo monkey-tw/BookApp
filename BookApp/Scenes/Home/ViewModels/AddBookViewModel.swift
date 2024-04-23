@@ -73,7 +73,13 @@ final class AddBookViewModel: ObservableObject {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let publicationYear = dateFormatter.string(from: date)
-        let entity = BookEntity(id: UUID().uuidString, title: bookTitle, author: author, publicationYear: publicationYear, isbn: isbn)
+        let entity = BookEntity(
+            id: UUID().uuidString,
+            title: bookTitle,
+            author: author, 
+            publicationYear: publicationYear,
+            isbn: isbn
+        )
         sendAction(.addBook(entity))
     }
     

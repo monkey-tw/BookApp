@@ -12,6 +12,7 @@ PODS:
   - Platform (0.1.0):
     - ProgressHUD
   - ProgressHUD (14.1.0)
+  - SwiftLint (0.54.0)
 
 DEPENDENCIES:
   - Moya (~> 15.0)
@@ -19,12 +20,14 @@ DEPENDENCIES:
   - Networking (from `./LocalPods/Networking`)
   - Platform (from `./LocalPods/Platform`)
   - ProgressHUD (= 14.1.0)
+  - SwiftLint (= 0.54.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Moya
     - ProgressHUD
+    - SwiftLint
 
 EXTERNAL SOURCES:
   Networking:
@@ -38,7 +41,8 @@ SPEC CHECKSUMS:
   Networking: 54dcf7642a28da0ead9cc6ebdaca41c513088707
   Platform: 212fb35374db0b967dc9b295b96dab9f2b88a937
   ProgressHUD: c4a55f108815c46a6bf082407d2f806840b7a869
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
-PODFILE CHECKSUM: c6425589a0ef87eb554d107df34bcf05a65d3030
+PODFILE CHECKSUM: 02bc4b829f57bc9fb58a6e594b7b78ac24b8eb63
 
 COCOAPODS: 1.15.2

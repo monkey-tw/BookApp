@@ -505,6 +505,7 @@
 				B25007662BD23F6B00464FA6 /* Sources */,
 				B25007672BD23F6B00464FA6 /* Frameworks */,
 				B25007682BD23F6B00464FA6 /* Resources */,
+				B2E62FEC2BD7D4AB00F63B7A /* ShellScript */,
 				15638092E5E9DC324C6CD20D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -680,6 +681,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B2E62FEC2BD7D4AB00F63B7A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		B77A412DFC4BDB310CB094C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

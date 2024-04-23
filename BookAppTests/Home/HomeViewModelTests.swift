@@ -53,7 +53,7 @@ final class HomeViewModelTests: XCTestCase {
         sut.loadStatus
             .dropFirst()
             .sink { status in
-                if case .loadFailure(_) = status {
+                if case .loadFailure = status {
                     expectation.fulfill()
                 }
             }
@@ -80,7 +80,13 @@ final class HomeViewModelTests: XCTestCase {
     func test_whenClickBookItem_thenPushToBookDetailPage() throws {
         // Given
         sut = HomeViewModel(useCase: useCase, navigator: navigator)
-        let bookModel = BookModel(id: "id1", title: "title1", author: "author1", publicationYear: "publicationYear1", isbn: "isbn1")
+        let bookModel = BookModel(
+            id: "id1",
+            title: "title1",
+            author: "author1",
+            publicationYear: "publicationYear1",
+            isbn: "isbn1"
+        )
         
         // When
         sut.sendAction(.pushToBookDetailPage(bookModel))

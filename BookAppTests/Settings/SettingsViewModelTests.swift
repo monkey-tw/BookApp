@@ -34,5 +34,4 @@ final class SettingsViewModelTests: XCTestCase {
         XCTAssertEqual(baseUrlManager.channel, .local)
     }
     
-
 }

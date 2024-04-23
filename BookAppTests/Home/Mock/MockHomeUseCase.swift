@@ -38,8 +38,20 @@ final class MockHomeUseCase: HomeUseCase {
 private extension MockHomeUseCase {
     func successBooks() -> [BookModel] {
         return [
-            .init(id: "id1", title: "title1", author: "author1", publicationYear: "publicationYear1", isbn: "isbn1"),
-            .init(id: "id2", title: "title2", author: "author2", publicationYear: "publicationYear2", isbn: "isbn2")
+            .init(
+                id: "id1",
+                title: "title1",
+                author: "author1",
+                publicationYear: "publicationYear1",
+                isbn: "isbn1"
+            ),
+            .init(
+                id: "id2",
+                title: "title2",
+                author: "author2",
+                publicationYear: "publicationYear2",
+                isbn: "isbn2"
+            )
         ]
     }
 }
