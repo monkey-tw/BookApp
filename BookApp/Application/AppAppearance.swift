@@ -23,7 +23,10 @@ final class AppAppearance {
     
     private static func setupTabbar() {
         let appearance = UITabBarAppearance()
-        appearance.backgroundColor = .black
-        
+        appearance.configureWithOpaqueBackground()
+        UITabBar.appearance().standardAppearance = appearance
+        if #available(iOS 15.0, *) {
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
 }
