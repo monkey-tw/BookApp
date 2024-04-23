@@ -17,7 +17,7 @@ public enum ApiEndpoint {
 
 extension ApiEndpoint: TargetType {
     public var baseURL: URL {
-        return .init(string: "http://localhost:8080")!
+        return .init(string: "http://13.210.14.37:8080")!
     }
     
     public var path: String {
