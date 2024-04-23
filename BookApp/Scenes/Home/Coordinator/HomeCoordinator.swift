@@ -32,6 +32,7 @@ extension HomeCoordinator: HomeNavigator {
         let useCase = StandardAddBookUseCase(repository: repository)
         let viewModel = AddBookViewModel(useCase: useCase, navigator: self)
         let viewController = AddBookViewController(viewModel: viewModel)
+        viewController.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(viewController, animated: true)
     }
     
@@ -44,6 +45,7 @@ extension HomeCoordinator: HomeNavigator {
         let useCase = StandardBookDetailUseCase(repository: repository)
         let viewModel = BookDetailViewModel(useCase: useCase, navigator: self, bookModel: bookModel)
         let viewController = BookDetailViewController(viewModel: viewModel)
+        viewController.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(viewController, animated: true)
     }
 }

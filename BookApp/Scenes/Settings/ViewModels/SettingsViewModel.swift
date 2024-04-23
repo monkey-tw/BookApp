@@ -22,6 +22,7 @@ class SettingsViewModel: ObservableObject {
     
     init(baseUrlManager: BaseUrlManager) {
         self.baseUrlManager = baseUrlManager
+        channel = baseUrlManager.channel
     }
     
     func sendAction(_ action: Action) {

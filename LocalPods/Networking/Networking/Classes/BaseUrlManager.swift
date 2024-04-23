@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum BaseUrlChannel {
+public enum BaseUrlChannel: String {
     case aws
     case local
 }
@@ -17,12 +17,19 @@ public protocol BaseUrlManager {
 }
 
 public class StandardBaseUrlManager: BaseUrlManager {
-    public var channel: BaseUrlChannel = .aws {
-        didSet {
+    public var channel: BaseUrlChannel {
+        set {
+            UserDefaults.standard.setValue(newValue.rawValue, forKey: baseUrlChannelKey)
             NotificationCenter.default.post(name: .baseUrlChannelDidUpdated, object: nil)
+        }
+        get {
+            let channelString = UserDefaults.standard.string(forKey: baseUrlChannelKey)
+            return BaseUrlChannel(rawValue: channelString ?? "") ?? .aws
         }
     }
     public static let instance: StandardBaseUrlManager = .init()
+    
+    private let baseUrlChannelKey: String = "baseUrlChannelKey"
 }
 
 public extension Notification.Name {
