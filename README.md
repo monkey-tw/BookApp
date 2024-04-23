@@ -17,5 +17,9 @@ Clone iOS project via: `git clone https://github.com/monkey-tw/BookApp.git`
 - Navigation based on UIKit, page view UI based on SwiftUI.
 - Modularized based on CocoaPods.
 
-# Test BookApp
-Refer to [BookServer](https://github.com/monkey-tw/BookApp.git) to run backend project, then you can test iOS project.
+# Connect to AWS server
+The book APP is configed to connect with AWS server by default, so you access the server directly in APP.
+
+# Build local server
+- Refer to [BookServer](https://github.com/monkey-tw/BookApp.git) to run backend project based on Docker, then you can test iOS project.
+- Then go to Settings page in APP, you can change the base url channel to localhost.
