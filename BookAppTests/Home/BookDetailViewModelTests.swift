@@ -22,6 +22,8 @@ final class BookDetailViewModelTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        useCase = nil
+        navigator = nil
     }
 
     func test_whenClickUpdateButton_thenUpdateSuccessfully() {

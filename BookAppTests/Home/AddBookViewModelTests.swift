@@ -21,6 +21,8 @@ final class AddBookViewModelTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        useCase = nil
+        navigator = nil
     }
 
     func test_whenClickAddButton_thenAddSuccessfully() {

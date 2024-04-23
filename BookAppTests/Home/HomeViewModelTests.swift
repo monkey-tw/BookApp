@@ -21,6 +21,8 @@ final class HomeViewModelTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        useCase = nil
+        navigator = nil
     }
 
     func test_whenCallRequestBookListAction_thenHasBooks() throws {
