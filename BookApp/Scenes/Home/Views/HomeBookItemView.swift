@@ -32,7 +32,6 @@ struct HomeBookItemView: View {
             Spacer()
             Image(systemName: "arrow.right")
                 .foregroundColor(.blue)
-        }
-        
+        }.contentShape(Rectangle())
     }
 }
