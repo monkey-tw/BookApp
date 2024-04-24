@@ -35,4 +35,5 @@ class MockApiClient: ApiClient {
                 .eraseToAnyPublisher()
         }
     }
+    // swiftlint:enable force_cast
 }
