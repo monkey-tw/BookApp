@@ -22,7 +22,7 @@ final class AddBookUseCaseTests: XCTestCase {
         repository = nil
     }
 
-    func test_whenCallAddBook_thenHasBooks() {
+    func test_whenCallAddBook_thenAddSuccessfully() {
         // Given
         sut = StandardAddBookUseCase(repository: repository)
         let expectation = expectation(description: "Add book success")
