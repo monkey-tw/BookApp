@@ -58,6 +58,8 @@
 		B2E62FEA2BD7526C00F63B7A /* MockBaseUrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E62FE92BD7526C00F63B7A /* MockBaseUrlManager.swift */; };
 		B2E62FF52BD8A79100F63B7A /* HomeUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E62FF42BD8A79100F63B7A /* HomeUseCaseTests.swift */; };
 		B2E62FF72BD8A7C800F63B7A /* MockHomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E62FF62BD8A7C800F63B7A /* MockHomeRepository.swift */; };
+		B2E62FF92BD8AE6400F63B7A /* AddBookUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E62FF82BD8AE6400F63B7A /* AddBookUseCaseTests.swift */; };
+		B2E62FFB2BD8AE8E00F63B7A /* MockAddBookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E62FFA2BD8AE8E00F63B7A /* MockAddBookRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +136,8 @@
 		B2E62FE92BD7526C00F63B7A /* MockBaseUrlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBaseUrlManager.swift; sourceTree = "<group>"; };
 		B2E62FF42BD8A79100F63B7A /* HomeUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCaseTests.swift; sourceTree = "<group>"; };
 		B2E62FF62BD8A7C800F63B7A /* MockHomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeRepository.swift; sourceTree = "<group>"; };
+		B2E62FF82BD8AE6400F63B7A /* AddBookUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookUseCaseTests.swift; sourceTree = "<group>"; };
+		B2E62FFA2BD8AE8E00F63B7A /* MockAddBookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAddBookRepository.swift; sourceTree = "<group>"; };
 		B93EA9A9FE10E3CA0327D60E /* Pods-BookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp.release.xcconfig"; path = "Target Support Files/Pods-BookApp/Pods-BookApp.release.xcconfig"; sourceTree = "<group>"; };
 		C1D41A021A4893F986E1298E /* Pods-BookApp-BookAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp-BookAppUITests.release.xcconfig"; path = "Target Support Files/Pods-BookApp-BookAppUITests/Pods-BookApp-BookAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF2828D9B3BA47D0252E78EB /* Pods-BookAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookAppTests.release.xcconfig"; path = "Target Support Files/Pods-BookAppTests/Pods-BookAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -400,6 +404,7 @@
 				B25242E72BD35C8C00B86E3F /* MockAddBookUseCase.swift */,
 				B2CDB6FC2BD39D6900040556 /* MockBookDetailUseCase.swift */,
 				B2E62FF62BD8A7C800F63B7A /* MockHomeRepository.swift */,
+				B2E62FFA2BD8AE8E00F63B7A /* MockAddBookRepository.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				B2E62FF42BD8A79100F63B7A /* HomeUseCaseTests.swift */,
+				B2E62FF82BD8AE6400F63B7A /* AddBookUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -814,6 +820,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E62FF52BD8A79100F63B7A /* HomeUseCaseTests.swift in Sources */,
+				B2E62FFB2BD8AE8E00F63B7A /* MockAddBookRepository.swift in Sources */,
 				B25242D22BD2785900B86E3F /* MockHomeUseCase.swift in Sources */,
 				B2CDB6FD2BD39D6900040556 /* MockBookDetailUseCase.swift in Sources */,
 				B2E62FF72BD8A7C800F63B7A /* MockHomeRepository.swift in Sources */,
@@ -821,6 +828,7 @@
 				B2CDB6FB2BD39D3D00040556 /* BookDetailViewModelTests.swift in Sources */,
 				B25242E02BD3535700B86E3F /* AddBookViewModelTests.swift in Sources */,
 				B2E62FEA2BD7526C00F63B7A /* MockBaseUrlManager.swift in Sources */,
+				B2E62FF92BD8AE6400F63B7A /* AddBookUseCaseTests.swift in Sources */,
 				B25242D82BD34ED200B86E3F /* MockHomeNavigator.swift in Sources */,
 				B25007852BD23F6D00464FA6 /* HomeViewModelTests.swift in Sources */,
 				B2E62FE82BD7523B00F63B7A /* SettingsViewModelTests.swift in Sources */,

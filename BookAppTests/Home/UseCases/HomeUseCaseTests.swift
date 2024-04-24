@@ -42,7 +42,7 @@ final class HomeUseCaseTests: XCTestCase {
         // Given
         repository = MockHomeRepository(scenario: .failed)
         sut = StandardHomeUseCase(repository: repository)
-        let expectation = expectation(description: "Request book list success")
+        let expectation = expectation(description: "Request book list fail")
         // When
         sut.requestBookList()
             .sink { completion in
