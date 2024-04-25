@@ -7,10 +7,8 @@
 Clone iOS project via: `git clone https://github.com/monkey-tw/BookApp.git`
 
 # Run iOS project
-- Open terminal and run: `cd BookApp`
-- Run: `pod install`. If there is any error, just go to the next step.
-- Open `BookApp.xcworkspace`
-- Click `Command+R` shortcut to run the project
+- Open `BookApp.xcworkspace` in BookApp folder and select `BookApp` scheme, and then click `Command+R` shortcut to run the project
+- Open terminal and run: `cd BookApp` and then run `pod install`. If there is any error in the last step.
 
 # Achitecture
 - MVVM + Clean Architecture based on Combine.
