@@ -19,7 +19,7 @@ extension ApiEndpoint: TargetType {
     public var baseURL: URL {
         switch StandardBaseUrlManager.instance.channel {
         case .aws:
-            return .init(string: "http://3.27.66.117:8080")!
+            return .init(string: "http://13.211.137.50:8080")!
         case .local:
             return .init(string: "http://localhost:8080")!
         }
